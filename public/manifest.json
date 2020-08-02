@@ -1,0 +1,21 @@
+{
+  "name": "Fernando Moreira",
+  "short_name": "nandomoreira",
+  "icons": [
+    {
+      "src": "/images/icon.svg",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/images/icon.svg",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "background_color": "#272643",
+  "description": "",
+  "display": "fullscreen",
+  "start_url": "/",
+  "theme_color": "#272643"
+}
