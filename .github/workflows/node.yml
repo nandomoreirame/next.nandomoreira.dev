@@ -23,5 +23,5 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: yarn install --frozen-lockfile
       - run: yarn eslint
-      # - run: yarn test
+      - run: yarn test
       - run: yarn build
