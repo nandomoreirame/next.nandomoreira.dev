@@ -6,6 +6,8 @@ export default { title: 'Components|Hero', decorators: [withKnobs] };
 
 export const defaultComponent = () => (
   <Fragment>
-    <Hero />
+    <Hero>
+      <h1>Hello</h1>
+    </Hero>
   </Fragment>
 );
