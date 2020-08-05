@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Logo /> Render component 1`] = `
+.c0 {
+  cursor: pointer;
+  display: inline-block;
+}
+
+<a
+  className="c0"
+>
+  <svg
+    fill="none"
+    height="45"
+    width="50"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M43.247 0v45H32.662L12.597 21.021V45H0V0h10.584L30.65 23.979V0h12.598z"
+      fill="#272643"
+    />
+    <rect
+      fill="#2C698D"
+      height="12.857"
+      rx="6.429"
+      width="12.987"
+      x="37.013"
+      y="32.143"
+    />
+  </svg>
+</a>
+`;

@@ -1,2 +1,6 @@
 !.storybook
 !.jest
+.next
+coverage
+public
+out

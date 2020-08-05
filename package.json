@@ -1,6 +1,11 @@
 {
-  "name": "react-avancado-boilerplate",
-  "version": "1.0.0",
+  "name": "nandomoreira.dev",
+  "version": "2.0.0",
+  "title": "Fernando Moreira",
+  "subtitle": " · Desenvolvedor front-end e WordPress em Curitiba/PR",
+  "description": "Sou um desenvolvedor front-end. Ajudo ONGs e pequenas empresas a criar projetos web personalizados de alta qualidade. No meu tempo livre eu escrevo em meu blog e contribuo com projetos open source | Desenvolvedor Front-end em Curitiba | Desenvolvedor WordPress em Curitiba | UX Designer em Curitiba",
+  "homepage": "https://next-nandomoreira-dev.netlify.app",
+  "license": "MIT",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -8,7 +13,7 @@
     "start": "next start",
     "export": "next export",
     "lint": "yarn eslint",
-    "eslint": "eslint src --max-warnings=0",
+    "eslint": "eslint . --ext \".js,.ts,.tsx,.jsx\" --max-warnings=0",
     "prettier": "prettier --write .",
     "test": "jest",
     "test:watch": "yarn test --watch",
@@ -22,21 +27,32 @@
   },
   "lint-staged": {
     "src/**/*": [
-      "yarn lint --fix",
       "yarn test --findRelatedTests --bail"
     ]
   },
   "dependencies": {
+    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-optipng": "^8.0.0",
+    "imagemin-svgo": "^8.0.0",
     "next": "9.4.4",
+    "next-compose-plugins": "^2.2.0",
+    "next-dark-mode": "^2.3.0",
+    "next-optimized-images": "^2.6.2",
     "next-pwa": "^2.6.1",
+    "next-seo": "^4.7.3",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "styled-components": "^5.1.1"
+    "react-icons": "^3.10.0",
+    "resize-observer-polyfill": "^1.5.1",
+    "styled-components": "^5.1.1",
+    "styled-media-query": "^2.1.2",
+    "webp-loader": "^0.6.0"
   },
   "devDependencies": {
     "@babel/core": "^7.10.3",
     "@babel/preset-typescript": "^7.10.1",
     "@storybook/addon-actions": "^5.3.19",
+    "@storybook/addon-info": "^5.3.19",
     "@storybook/addon-knobs": "^5.3.19",
     "@storybook/addon-links": "^5.3.19",
     "@storybook/addons": "^5.3.19",
@@ -44,7 +60,7 @@
     "@storybook/react": "^5.3.19",
     "@testing-library/jest-dom": "^5.11.0",
     "@testing-library/react": "^10.4.3",
-    "@types/jest": "^26.0.3",
+    "@types/jest": "^26.0.8",
     "@types/node": "^14.0.14",
     "@types/react": "^16.9.41",
     "@types/react-test-renderer": "^16.9.2",
@@ -52,6 +68,7 @@
     "@typescript-eslint/eslint-plugin": "^3.4.0",
     "@typescript-eslint/parser": "^3.4.0",
     "babel-loader": "^8.1.0",
+    "babel-plugin-inline-react-svg": "^1.1.1",
     "babel-plugin-styled-components": "^1.10.7",
     "eslint": "^7.3.1",
     "eslint-config-prettier": "^6.11.0",
@@ -59,12 +76,16 @@
     "eslint-plugin-react": "^7.20.0",
     "eslint-plugin-react-hooks": "^4.0.4",
     "husky": "^4.2.5",
-    "jest": "^26.1.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^26.2.2",
     "jest-styled-components": "^7.0.2",
     "lint-staged": "^10.2.11",
     "next-transpile-modules": "^4.0.2",
     "prettier": "^2.0.5",
+    "react-docgen-typescript-loader": "^3.7.2",
     "react-test-renderer": "^16.13.1",
-    "typescript": "^3.9.5"
+    "ts-jest": "^26.1.4",
+    "ts-loader": "^8.0.2",
+    "typescript": "^3.9.7"
   }
 }

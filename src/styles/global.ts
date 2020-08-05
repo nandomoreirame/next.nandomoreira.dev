@@ -8,7 +8,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   html {
-    font-size: 62.5%;
+    font-size: 16px;
   }
 
   html, body, #__next {
@@ -16,6 +16,13 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+      'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1rem;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+      'Open Sans', 'Helvetica Neue', sans-serif;
   }
 `;

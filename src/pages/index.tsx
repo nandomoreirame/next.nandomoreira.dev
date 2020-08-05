@@ -1,12 +1,21 @@
 import React, { Fragment } from 'react';
-import { Hero } from '@nandomoreira/components';
+import { Hero, DarkMode, Avatar, Social } from '@nandomoreira/components';
 
 const HomePage = () => {
   return (
     <Fragment>
       <Hero>
-        <h1>nandomoreira.dev</h1>
+        <Avatar src={require(`@nandomoreira/images/avatar.png`)} />
+        <div>
+          <h1>Olá, eu sou o Fernando</h1>
+          <h2>
+            Ajudo empresas a criar projetos web personalizados, de alta qualidade e com tecnologias
+            criativas.
+          </h2>
+          <Social />
+        </div>
       </Hero>
+      <DarkMode />
     </Fragment>
   );
 };

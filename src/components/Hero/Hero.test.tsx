@@ -8,8 +8,12 @@ describe('<Hero />', () => {
     expect(componentTree).toMatchSnapshot();
   });
 
-  it('Render component with prop text', () => {
-    const componentTree = create(<Hero>Hello</Hero>).toJSON();
+  it('Render component with children prop', () => {
+    const componentTree = create(
+      <Hero>
+        <h1>Hello</h1>
+      </Hero>,
+    ).toJSON();
     expect(componentTree).toMatchSnapshot();
   });
 });

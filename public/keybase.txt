@@ -1,0 +1,88 @@
+==================================================================
+https://keybase.io/oseunando
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://nandomoreira.dev
+  * I am oseunando (https://keybase.io/oseunando) on keybase.
+  * I have a public key with fingerprint 17C0 45DA 9A9D 8B64 3015  74E7 C281 29DD EEA9 B52F
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01204f501d60a4ace61b1955849a853441e7966fb85effd619f1d4637acc8fa7d8a70a",
+      "fingerprint": "17c045da9a9d8b64301574e7c28129ddeea9b52f",
+      "host": "keybase.io",
+      "key_id": "c28129ddeea9b52f",
+      "kid": "0101e81733bba2c40714a67aeb50c413138e98a83bb74304d242fa50d042609d6beb0a",
+      "uid": "308204ef3b6968f5f097c2acec862c19",
+      "username": "oseunando"
+    },
+    "merkle_root": {
+      "ctime": 1552952454,
+      "hash_meta": "0bcc31ee52003d7cc85ed8582d1e60977e8e1bca13941c3d11dcc8a91d36f34f",
+      "seqno": 4977098
+    },
+    "revoke": {
+      "sig_ids": [
+        "36812ec86c6bd1c3a1d608687dc345615b6c82925b237cb0cb3ec1e0a26c7e1e0f"
+      ]
+    },
+    "service": {
+      "hostname": "nandomoreira.dev",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1552952458,
+  "expire_in": 157680000,
+  "prev": "db96e9d739167370d8cbf138846a441b13cb5a740b3b2677fcac0aceed4a63fd",
+  "seqno": 10,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.1.0
+Comment: https://keybase.io/crypto
+
+yMQEAnicbZN5bBVFHMdfKUVoHi1WwiGmkuUsPOjO3vugglHKYaxC01AQfc61ZW27
+2+7ue22tr1KpCDVEoDSijUlTDiVcVShYECMtlURKTYByhDQcImiUS7CCBzrbQEyM
++8/u7Hzn+/vO5zdzeHBiIDmhrTqj5/rWlsyEo22V0cCSNaHaSg7ZpIILV3KFtO9F
+iwh1vUihSbgwxwOBlwyZB0ThoQQxVQACuixrkg41WZQkQFVdUQykydQwiAJ0AxBJ
+EVWIsWZAlWhQ5SEX4gzTKqBOiWNaHrMFKuYlmUAd6kRDiiTyQFYlqmJBA4JOCKVQ
+R7JgsIVLbddfwcIh6NKpps3+sUGkL97/6B/m5gHVgCqKCEEBS7wKJKiokCKZxxIQ
+gahRXYMam1ZZdYkIkmBAmSe8JCi8ThREUV/uaJ+dyGuMAzVEpOiKZsgGr7OsDAfW
+FAED3Re61LFgMWVq26VRC1rE5uIhrpg6hUU04ti259PFnulrgCwLuixIssR2CN2l
+kWLqQT83wlgElMoCz4tEZRBlSjRZEwigLJeqUo0ChCEQdQlgkQBAmAbqgIiKIUo+
+AJeWWjYXlpiY1zWWwKExu5D6xV2zgHFzufBLnKgwcn58rCDCnKDfYU3RVIJFSVaA
+jBSsCbogI0FUMeIxEikGlIeCglXKPgzu5bhfzImZuM/cb9QDAH2bL7YdajpwKqEx
+lqrEsT0b20Vsdqnnlbhhn41XUeLLyyiKPDCKINMi7KiwFTHquKZtMVZM+V9sWoij
+5SWmQyOmr5BVRePZ49dh5cIcQbpCdaKKOlBUUeWJhpHBmq5JCmSHFgERIxmqEo9E
+JCiqamCIedZPStgxEQ3yL0fATD1YwDwZPQt6UYdy8bZDS/oHEpIDA5L6+XcokDxo
+yMOblZye+kfSoWupTZ8uuJtblle1+f7Mkd0HHk/NXrlqbGj6sKPCl/js2Js5yfv3
+DssdcHjunthbDQuLt20RXpmU1z368+OuW7Nx+OiQF7j4TSj47qk3J3TnXkirmRHZ
+VTGxaW3XE/kHWxY12/uyFrZ31l2p21Ri7EvUO2aSePnvG0rXpeRNjs+ef/OxyoKy
+dWnh6IjdjdZnTefcS7vmXOt3/ETrrZV103duzr4aKJ+VVzplWnMsNnnaKOvqwede
+jVTd7j6/4rW0WfvPDw9WJJ3On3d0TMLtJb0f707Yeui3O435A0nn2jeeDg2/GaJV
+Iz/4+p2WET/Px6WrgilTCif8vbyx9biTJ7fE03vbu73lta3tL0zKevTc3lou41jV
+/LqTr1efqU75xFgeNutn1Me8I13LwPrMeWd/Odvb1FMRqPp13MIVQN26/86GzvdT
+TqyfvGPvkPzDN44dsPj17+2InGl9fllbp9d7Iph1uTzpyuBLdUUD336ktnr1vfTx
+Iy5kPzPuizH3Ln+YGr5bv71/Y+vs8KiJq9vEsoEFO880pGfsScw6Yk14NnT15Omd
+i5483RDEa3Jvj06s2j2oo779RSOt5kYwPKzmq4/G3zpyMJqTmL149cWhXQuSKvr9
+dEf5c+6pxOsjp48t6nkq9temmgM/Zg4N5pcupmhbw/ffzsqM3m/uulH8w8b4XLl5
+ZsaAjqzO9i3bc76b01HWk4P+AU/w/gg=
+=NtoQ
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/oseunando
+
+==================================================================

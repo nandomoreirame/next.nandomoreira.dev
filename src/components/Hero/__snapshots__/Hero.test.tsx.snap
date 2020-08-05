@@ -6,7 +6,7 @@ exports[`<Hero /> Render component 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #272643;
+  background-color: #F6FAFD;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -17,13 +17,198 @@ exports[`<Hero /> Render component 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  min-height: 100vh;
-  width: 100vw;
 }
 
 .c1 {
-  color: #f6fafd;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #272643;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 1000px;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   text-align: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 30px;
+}
+
+.c1 h1 {
+  font-weight: 600;
+  font-size: 16px;
+  margin: 30px 0 10px;
+  font-weight: 500;
+  color: rgba(44,105,141,0.5);
+}
+
+.c1 h1 a {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c1 h2 {
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 1.4;
+  color: #272643;
+}
+
+@media (min-width:768px) {
+  .c0 {
+    min-height: 100vh;
+    width: 100vw;
+  }
+}
+
+@media (min-width:768px) {
+  .c1 {
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    text-align: left;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
+}
+
+@media (min-width:768px) {
+  .c1 > div {
+    margin-left: 60px;
+  }
+}
+
+@media (min-width:768px) {
+  .c1 h1 {
+    font-size: 18px;
+    margin: 0 0 10px;
+  }
+}
+
+@media (min-width:768px) {
+  .c1 h2 {
+    font-size: 30px;
+    line-height: 1.54;
+  }
+}
+
+<section
+  className="c0"
+>
+  <div
+    className="c1"
+  />
+</section>
+`;
+
+exports[`<Hero /> Render component with children prop 1`] = `
+.c0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #F6FAFD;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 2rem;
+  height: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #272643;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 1000px;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  text-align: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 30px;
+}
+
+.c1 h1 {
+  font-weight: 600;
+  font-size: 16px;
+  margin: 30px 0 10px;
+  font-weight: 500;
+  color: rgba(44,105,141,0.5);
+}
+
+.c1 h1 a {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c1 h2 {
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 1.4;
+  color: #272643;
+}
+
+@media (min-width:768px) {
+  .c0 {
+    min-height: 100vh;
+    width: 100vw;
+  }
+}
+
+@media (min-width:768px) {
+  .c1 {
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    text-align: left;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
+}
+
+@media (min-width:768px) {
+  .c1 > div {
+    margin-left: 60px;
+  }
+}
+
+@media (min-width:768px) {
+  .c1 h1 {
+    font-size: 18px;
+    margin: 0 0 10px;
+  }
+}
+
+@media (min-width:768px) {
+  .c1 h2 {
+    font-size: 30px;
+    line-height: 1.54;
+  }
 }
 
 <section
@@ -33,45 +218,8 @@ exports[`<Hero /> Render component 1`] = `
     className="c1"
   >
     <h1>
-      Hello Hero
+      Hello
     </h1>
-  </div>
-</section>
-`;
-
-exports[`<Hero /> Render component with prop text 1`] = `
-.c0 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: #272643;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: 2rem;
-  height: 100%;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  min-height: 100vh;
-  width: 100vw;
-}
-
-.c1 {
-  color: #f6fafd;
-  text-align: center;
-}
-
-<section
-  className="c0"
->
-  <div
-    className="c1"
-  >
-    Hello
   </div>
 </section>
 `;

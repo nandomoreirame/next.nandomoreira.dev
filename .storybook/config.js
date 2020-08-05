@@ -1,4 +1,4 @@
 import { addDecorator } from '@storybook/react';
-import withGlobalStyles from './withGlobalStyles';
+import Wrapper from './wrapper';
 
-addDecorator(withGlobalStyles);
+addDecorator(Wrapper);

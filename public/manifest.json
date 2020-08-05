@@ -3,12 +3,12 @@
   "short_name": "nandomoreira",
   "icons": [
     {
-      "src": "/images/icon.svg",
+      "src": "/icon.svg",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "/images/icon.svg",
+      "src": "/icon.svg",
       "type": "image/png",
       "sizes": "512x512"
     }
