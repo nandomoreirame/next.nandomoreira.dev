@@ -1,10 +1,10 @@
 import React from 'react';
-import { create } from 'react-test-renderer';
+import { render } from '@testing-library/react';
 import { DarkMode } from '.';
 
 describe('<DarkMode />', () => {
-  it('Render component', () => {
-    const componentTree = create(<DarkMode />).toJSON();
+  test('Render component', () => {
+    const componentTree = render(<DarkMode />);
     expect(componentTree).toMatchSnapshot();
   });
 });

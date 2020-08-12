@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Hero /> Render component 1`] = `
-.c0 {
+Object {
+  "asFragment": [Function],
+  "baseElement": .c0 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -46,7 +48,7 @@ exports[`<Hero /> Render component 1`] = `
   font-size: 16px;
   margin: 30px 0 10px;
   font-weight: 500;
-  color: rgba(44,105,141,0.5);
+  color: rgba(44,105,141,0.75);
 }
 
 .c1 h1 a {
@@ -56,7 +58,7 @@ exports[`<Hero /> Render component 1`] = `
 
 .c1 h2 {
   font-weight: 800;
-  font-size: 24px;
+  font-size: 18px;
   line-height: 1.4;
   color: #272643;
 }
@@ -94,6 +96,12 @@ exports[`<Hero /> Render component 1`] = `
   }
 }
 
+@media (min-width:450px) {
+  .c1 h2 {
+    font-size: 22px;
+  }
+}
+
 @media (min-width:768px) {
   .c1 h2 {
     font-size: 30px;
@@ -101,17 +109,85 @@ exports[`<Hero /> Render component 1`] = `
   }
 }
 
-<section
-  className="c0"
->
-  <div
-    className="c1"
-  />
-</section>
+<body>
+    <div>
+      <section
+        class="c0"
+      >
+        <div
+          class="c1"
+        />
+      </section>
+    </div>
+  </body>,
+  "container": <div>
+    <section
+      class="Herostyles__Hero-mes4b5-0 kcZYiA"
+    >
+      <div
+        class="Herostyles__HeroInner-mes4b5-1 iXkpbS"
+      />
+    </section>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
 `;
 
 exports[`<Hero /> Render component with children prop 1`] = `
-.c0 {
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    .c0 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -156,7 +232,7 @@ exports[`<Hero /> Render component with children prop 1`] = `
   font-size: 16px;
   margin: 30px 0 10px;
   font-weight: 500;
-  color: rgba(44,105,141,0.5);
+  color: rgba(44,105,141,0.75);
 }
 
 .c1 h1 a {
@@ -166,7 +242,7 @@ exports[`<Hero /> Render component with children prop 1`] = `
 
 .c1 h2 {
   font-weight: 800;
-  font-size: 24px;
+  font-size: 18px;
   line-height: 1.4;
   color: #272643;
 }
@@ -204,6 +280,12 @@ exports[`<Hero /> Render component with children prop 1`] = `
   }
 }
 
+@media (min-width:450px) {
+  .c1 h2 {
+    font-size: 22px;
+  }
+}
+
 @media (min-width:768px) {
   .c1 h2 {
     font-size: 30px;
@@ -211,15 +293,83 @@ exports[`<Hero /> Render component with children prop 1`] = `
   }
 }
 
-<section
-  className="c0"
->
-  <div
-    className="c1"
-  >
-    <h1>
-      Hello
-    </h1>
-  </div>
-</section>
+<div>
+      <section
+        class="c0"
+      >
+        <div
+          class="c1"
+        >
+          <h1>
+            Hello
+          </h1>
+        </div>
+      </section>
+    </div>
+  </body>,
+  "container": <div>
+    <section
+      class="Herostyles__Hero-mes4b5-0 kcZYiA"
+    >
+      <div
+        class="Herostyles__HeroInner-mes4b5-1 iXkpbS"
+      >
+        <h1>
+          Hello
+        </h1>
+      </div>
+    </section>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
 `;

@@ -1,15 +1,15 @@
 import React from 'react';
-import { create } from 'react-test-renderer';
+import { render } from '@testing-library/react';
 import { Avatar } from '.';
 
 describe('<Avatar />', () => {
-  it('Render component', () => {
-    const componentTree = create(<Avatar />).toJSON();
-    expect(componentTree).toMatchSnapshot();
+  test('Render component', () => {
+    const component = render(<Avatar />);
+    expect(component).toMatchSnapshot();
   });
 
-  it('Render component with src prop', () => {
-    const componentTree = create(<Avatar src="/images/avatar.png" />).toJSON();
-    expect(componentTree).toMatchSnapshot();
+  test('Render component with src prop', () => {
+    const component = render(<Avatar src="/images/avatar.png" />);
+    expect(component).toMatchSnapshot();
   });
 });

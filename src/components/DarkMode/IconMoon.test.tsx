@@ -1,10 +1,10 @@
 import React from 'react';
-import { create } from 'react-test-renderer';
+import { render } from '@testing-library/react';
 import { IconMoon } from '.';
 
 describe('<IconMoon />', () => {
-  it('Render component', () => {
-    const componentTree = create(<IconMoon />).toJSON();
+  test('Render component', () => {
+    const componentTree = render(<IconMoon />);
     expect(componentTree).toMatchSnapshot();
   });
 });

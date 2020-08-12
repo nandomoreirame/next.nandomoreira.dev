@@ -1,19 +1,19 @@
 import React from 'react';
-import { create } from 'react-test-renderer';
+import { render } from '@testing-library/react';
 import { Hero } from '.';
 
 describe('<Hero />', () => {
-  it('Render component', () => {
-    const componentTree = create(<Hero />).toJSON();
+  test('Render component', () => {
+    const componentTree = render(<Hero />);
     expect(componentTree).toMatchSnapshot();
   });
 
-  it('Render component with children prop', () => {
-    const componentTree = create(
+  test('Render component with children prop', () => {
+    const componentTree = render(
       <Hero>
         <h1>Hello</h1>
       </Hero>,
-    ).toJSON();
+    );
     expect(componentTree).toMatchSnapshot();
   });
 });

@@ -1,10 +1,10 @@
 import React from 'react';
-import { create } from 'react-test-renderer';
+import { render } from '@testing-library/react';
 import { Social } from '.';
 
 describe('<Social />', () => {
-  it('Render component', () => {
-    const componentTree = create(<Social />).toJSON();
+  test('Render component', () => {
+    const componentTree = render(<Social />);
     expect(componentTree).toMatchSnapshot();
   });
 });

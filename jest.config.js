@@ -4,7 +4,7 @@ const { resolve } = require('path');
 module.exports = {
   testEnvironment: 'jsdom',
   testPathIgnorePatterns: ['/node_modules/', '/.next/'],
-  collectCoverage: true,
+  coverageReporters: ['html', 'text-summary'],
   collectCoverageFrom: [
     './src/**/*.ts(x)?',
     '!./src/**/index.ts',

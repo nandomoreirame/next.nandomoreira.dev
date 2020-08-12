@@ -15,10 +15,11 @@
     "lint": "yarn eslint",
     "eslint": "eslint . --ext \".js,.ts,.tsx,.jsx\" --max-warnings=0",
     "prettier": "prettier --write .",
-    "test": "jest",
-    "test:watch": "yarn test --watch",
     "storybook": "start-storybook -s ./public -p 6006",
-    "build-storybook": "build-storybook -s ./public"
+    "build-storybook": "build-storybook -s ./public",
+    "test": "jest",
+    "test:watch": "jest --watch --updateSnapshot --verbose --no-watchman",
+    "test:coverage": "jest --collect-coverage"
   },
   "husky": {
     "hooks": {
@@ -83,7 +84,6 @@
     "next-transpile-modules": "^4.0.2",
     "prettier": "^2.0.5",
     "react-docgen-typescript-loader": "^3.7.2",
-    "react-test-renderer": "^16.13.1",
     "ts-jest": "^26.1.4",
     "ts-loader": "^8.0.2",
     "typescript": "^3.9.7"

@@ -46,7 +46,7 @@ export const HeroInner = styled.div`
     margin: 30px 0 10px;
     font-weight: 500;
     color: ${({ darkModeActive }: withDarkModeActiveProps) =>
-      darkModeActive ? `rgba(229, 229, 229, 0.8)` : `rgba(44, 105, 141, 0.5)`};
+      darkModeActive ? `rgba(229, 229, 229, 0.8)` : `rgba(44, 105, 141, 0.75)`};
 
     a {
       text-decoration: none;
@@ -60,10 +60,14 @@ export const HeroInner = styled.div`
 
   h2 {
     font-weight: 800;
-    font-size: 24px;
+    font-size: 18px;
     line-height: 1.4;
     color: ${({ darkModeActive }: withDarkModeActiveProps) =>
       darkModeActive ? `#f6fafd` : `#272643`};
+
+    ${media.greaterThan('small')`
+      font-size: 22px;
+    `}
 
     ${media.greaterThan('medium')`
       font-size: 30px;

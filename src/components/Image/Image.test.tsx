@@ -1,10 +1,10 @@
 import React from 'react';
-import { create } from 'react-test-renderer';
+import { render } from '@testing-library/react';
 import { Image } from '.';
 
 describe('<Image />', () => {
-  it('Render component', () => {
-    const componentTree = create(<Image />).toJSON();
+  test('Render component', () => {
+    const componentTree = render(<Image />);
     expect(componentTree).toMatchSnapshot();
   });
 });
