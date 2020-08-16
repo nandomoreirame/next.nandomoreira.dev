@@ -1,14 +1,15 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
-  * {
-    margin: 0;
-    padding: 0;
+  html {
+    font-size: 16px;
     box-sizing: border-box;
   }
 
-  html {
-    font-size: 16px;
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
   }
 
   html, body, #__next {
@@ -16,13 +17,14 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
-      'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 1rem;
+    background-color: ${({ theme }) => theme?.backgroundColor};
+    color: ${({ theme }) => theme?.textColor};
+    font-family: ${({ theme }) => theme?.fontFamily};
+    font-size: ${({ theme }) => theme?.fontSize};
+    line-height: ${({ theme }) => theme?.lineHeight};
   }
 
   h1, h2, h3, h4 {
-    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
-      'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: "Montserrat", ${({ theme }) => theme?.fontFamily};
   }
 `;

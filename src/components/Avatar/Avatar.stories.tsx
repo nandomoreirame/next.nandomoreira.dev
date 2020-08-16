@@ -9,8 +9,8 @@ export const defaultAvatar = () => (
   </Fragment>
 );
 
-export const wisthSize = () => (
+export const withSize = () => (
   <Fragment>
-    <Avatar size={200} />
+    <Avatar width={200} />
   </Fragment>
 );

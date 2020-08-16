@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 import media from 'styled-media-query';
-import { withDarkModeActiveProps } from '@nandomoreira/@types';
 
-export const Nav = styled.nav`
+export const SocialNav = styled.nav`
   align-items: center;
   display: flex;
   margin-top: 20px;
@@ -15,8 +14,8 @@ export const Nav = styled.nav`
   &::before,
   &::after {
     width: 40px;
-    background-color: ${({ darkModeActive }: withDarkModeActiveProps) =>
-      darkModeActive ? `#e5e5e5` : `#2c698d`};
+    background-color: ${({ theme }) => theme?.borderColor};
+    opacity: 0.5;
     content: '';
 
     ${media.greaterThan('medium')`
@@ -41,10 +40,10 @@ export const Nav = styled.nav`
   }
 `;
 
-export const Link = styled.a`
+export const SocialLink = styled.a`
   display: inline-block;
   margin-left: 5px;
-  padding: 5px;
+  padding: 0 5px;
   transition: all 0.12s ease-in-out;
 
   ${media.greaterThan('medium')`

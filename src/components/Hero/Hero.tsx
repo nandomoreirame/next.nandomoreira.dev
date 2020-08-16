@@ -1,19 +1,14 @@
 import React, { memo } from 'react';
-import * as Styled from './Hero.styles';
-import { useDarkMode } from 'next-dark-mode';
+import * as s from './Hero.styles';
 
 type HeroProps = {
   children: React.ReactNode;
 };
 
-const Hero: React.FunctionComponent<HeroProps> = ({ children }: HeroProps) => {
-  const { darkModeActive } = useDarkMode();
-
-  return (
-    <Styled.Hero darkModeActive={darkModeActive}>
-      <Styled.HeroInner darkModeActive={darkModeActive}>{children}</Styled.HeroInner>
-    </Styled.Hero>
-  );
-};
+const Hero: React.FC<HeroProps> = ({ children }: HeroProps) => (
+  <s.Hero>
+    <s.HeroInner>{children}</s.HeroInner>
+  </s.Hero>
+);
 
 export default memo(Hero);

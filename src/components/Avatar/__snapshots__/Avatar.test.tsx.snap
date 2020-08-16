@@ -3,42 +3,10 @@
 exports[`<Avatar /> Render component 1`] = `
 Object {
   "asFragment": [Function],
-  "baseElement": .c0 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: #2C698D;
-  border-radius: 50%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 190px 0 0;
-  -ms-flex: 190px 0 0;
-  flex: 190px 0 0;
-  height: 190px;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 190px;
-}
-
-<body>
-    <div>
-      <figure
-        class="c0"
-        size="240"
-      />
-    </div>
+  "baseElement": <body>
+    <div />
   </body>,
-  "container": <div>
-    <figure
-      class="Avatarstyles__Figure-sc-20wegh-0 czUcIb"
-      size="240"
-    />
-  </div>,
+  "container": <div />,
   "debug": [Function],
   "findAllByAltText": [Function],
   "findAllByDisplayValue": [Function],
@@ -97,67 +65,9 @@ exports[`<Avatar /> Render component with src prop 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
-    .c0 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: #2C698D;
-  border-radius: 50%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 190px 0 0;
-  -ms-flex: 190px 0 0;
-  flex: 190px 0 0;
-  height: 190px;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 190px;
-}
-
-.c1 {
-  border-radius: 50%;
-  border: 2px solid #F6FAFD;
-  display: inline-block;
-  height: 184px;
-  width: 184px;
-}
-
-<div>
-      <figure
-        class="c0"
-        size="240"
-      >
-        <img
-          alt="Foto de Fernando Moreira Costa"
-          class="c1"
-          height="234"
-          loading="lazy"
-          src="/images/avatar.png"
-          width="234"
-        />
-      </figure>
-    </div>
+    <div />
   </body>,
-  "container": <div>
-    <figure
-      class="Avatarstyles__Figure-sc-20wegh-0 czUcIb"
-      size="240"
-    >
-      <img
-        alt="Foto de Fernando Moreira Costa"
-        class="Avatarstyles__Image-sc-20wegh-1 dpLPPu"
-        height="234"
-        loading="lazy"
-        src="/images/avatar.png"
-        width="234"
-      />
-    </figure>
-  </div>,
+  "container": <div />,
   "debug": [Function],
   "findAllByAltText": [Function],
   "findAllByDisplayValue": [Function],

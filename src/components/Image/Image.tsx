@@ -1,30 +1,30 @@
 import React, { memo, Fragment } from 'react';
-import * as Styled from './Image.styles';
+import * as S from './Image.styles';
 
-type ImageProps = {
+type Image = {
   src?: string;
   alt?: string;
   size?: string | number;
 };
 
-const Image: React.FunctionComponent<ImageProps> = ({ src, alt = '', size = 100 }: ImageProps) => {
+const Image: React.FC<Image> = ({ src, alt = '', size = 100 }: Image) => {
   return (
     <Fragment>
       {src && (
-        <Styled.Figure>
+        <S.Figure>
           <source srcSet={require(`@nandomoreira/images/${src}?webp`)} type="image/webp" />
           <source
             srcSet={require(`@nandomoreira/images/${src}?resize&size=${size}`)}
             type="image/png"
           />
-          <Styled.Image
+          <S.Image
             src={require(`@nandomoreira/images/${src}?resize&size=${size}`)}
             loading="lazy"
             alt={alt}
             width={size}
             height={size}
           />
-        </Styled.Figure>
+        </S.Figure>
       )}
     </Fragment>
   );

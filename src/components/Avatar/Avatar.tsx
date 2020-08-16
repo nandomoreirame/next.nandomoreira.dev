@@ -1,29 +1,20 @@
-import React, { memo } from 'react';
-import { useDarkMode } from 'next-dark-mode';
-import * as Styled from './Avatar.styles';
+import React, { memo, Fragment } from 'react';
+import * as S from './Avatar.styles';
 
 interface AvatarProps {
+  alt?: string;
   src?: string;
-  size?: number;
+  width?: number;
 }
 
-const Avatar: React.FunctionComponent<AvatarProps> = ({ src, size = 240 }: AvatarProps) => {
-  const { darkModeActive } = useDarkMode();
-
-  return (
-    <Styled.Figure size={size} darkModeActive={darkModeActive}>
-      {src && (
-        <Styled.Image
-          alt="Foto de Fernando Moreira Costa"
-          darkModeActive={darkModeActive}
-          loading="lazy"
-          width={size - 6}
-          height={size - 6}
-          src={src}
-        />
-      )}
-    </Styled.Figure>
-  );
-};
+const Avatar: React.FC<AvatarProps> = ({ alt, src, width = 240 }: AvatarProps) => (
+  <Fragment>
+    {src && alt && (
+      <S.Figure width={width}>
+        <S.Image alt={alt} height={width - 6} loading="lazy" src={src} width={width - 6} />
+      </S.Figure>
+    )}
+  </Fragment>
+);
 
 export default memo(Avatar);

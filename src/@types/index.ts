@@ -1,16 +1,6 @@
-import React from 'react';
+import { HTMLAttributes } from 'react';
 
-export type withDarkModeActiveProps = Partial<React.HTMLAttributes<HTMLElement>> & {
-  readonly darkModeActive: boolean;
-};
-
-export type FigureProps = withDarkModeActiveProps & {
-  readonly size: number;
-};
-
-export type ImageProps = Partial<React.HTMLAttributes<HTMLImageElement>> & withDarkModeActiveProps;
-
-export type SEOType = {
+export type SEO = {
   readonly description?: string;
   readonly favicon?: string;
   readonly image?: string;
@@ -18,4 +8,20 @@ export type SEOType = {
   readonly themeColor?: string;
   readonly title?: string;
   readonly url?: string;
+};
+
+export type FigureProps = Partial<HTMLAttributes<HTMLElement>> & {
+  readonly width?: number;
+  readonly height?: number;
+};
+
+export type ImageProps = Partial<HTMLAttributes<HTMLImageElement>> & {
+  readonly width?: number;
+  readonly height?: number;
+};
+
+export type SocialLink = {
+  readonly title: string;
+  readonly link: string;
+  readonly icon: JSX.Element;
 };

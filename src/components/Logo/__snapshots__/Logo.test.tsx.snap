@@ -14,6 +14,7 @@ Object {
         class="c0"
       >
         <svg
+          class=""
           fill="none"
           height="45"
           width="50"
@@ -21,10 +22,9 @@ Object {
         >
           <path
             d="M43.247 0v45H32.662L12.597 21.021V45H0V0h10.584L30.65 23.979V0h12.598z"
-            fill="#272643"
           />
           <rect
-            fill="#2C698D"
+            class="dot"
             height="12.857"
             rx="6.429"
             width="12.987"
@@ -40,6 +40,7 @@ Object {
       class="Logostyles__Logo-ztqmk5-0 jbrqWl"
     >
       <svg
+        class="Logostyles__Svg-ztqmk5-1 FzJFq"
         fill="none"
         height="45"
         width="50"
@@ -47,10 +48,9 @@ Object {
       >
         <path
           d="M43.247 0v45H32.662L12.597 21.021V45H0V0h10.584L30.65 23.979V0h12.598z"
-          fill="#272643"
         />
         <rect
-          fill="#2C698D"
+          class="dot"
           height="12.857"
           rx="6.429"
           width="12.987"

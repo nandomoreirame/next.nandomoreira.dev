@@ -1,18 +1,16 @@
 import React, { memo } from 'react';
-import * as Styled from './DarkMode.styles';
+import * as S from './DarkMode.styles';
 import { useDarkMode } from 'next-dark-mode';
 import IconSun from './IconSun';
 import IconMoon from './IconMoon';
 
-const DarkMode: React.FunctionComponent = () => {
+const DarkMode: React.FC = () => {
   const { darkModeActive, switchToDarkMode, switchToLightMode } = useDarkMode();
 
-  const handleDarkMode = () => (darkModeActive ? switchToLightMode() : switchToDarkMode());
-
   return (
-    <Styled.DarkMode onClick={handleDarkMode}>
+    <S.DarkMode onClick={() => (darkModeActive ? switchToLightMode() : switchToDarkMode())}>
       {darkModeActive ? <IconSun /> : <IconMoon />}
-    </Styled.DarkMode>
+    </S.DarkMode>
   );
 };
 

@@ -1,15 +1,15 @@
 import React, { Fragment } from 'react';
 import NextHead from 'next/head';
 import { useRouter } from 'next/router';
-import { SEOType } from '@nandomoreira/@types';
+import { SEO } from '@nandomoreira/@types';
 
-const seo: SEOType = (process?.env?.SEO as SEOType) || {};
+const seo: SEO = (process?.env?.SEO as SEO) || {};
 const defaultTitle = seo?.title;
 const defaultDescription = seo?.description;
-const defaultOgImage = seo?.image || `${process?.env?.BASE_URL}/images/share.png`;
-const defaultFavicon = seo?.favicon || `${process?.env?.BASE_URL}/images/icon.svg`;
+const defaultOgImage = seo?.image || `${process?.env?.BASE_URL}/share.png`;
+const defaultFavicon = seo?.favicon || `${process?.env?.BASE_URL}/icon.svg`;
 
-type Props = SEOType & {
+type Props = SEO & {
   children?: React.ReactElement;
   socialTags?: boolean;
 };
@@ -27,7 +27,7 @@ type Props = SEOType & {
  * @param lang
  * @constructor
  */
-const SiteHead: React.FunctionComponent<Props> = ({
+const SiteHead: React.FC<Props> = ({
   title,
   description = defaultDescription,
   ogImage = defaultOgImage,

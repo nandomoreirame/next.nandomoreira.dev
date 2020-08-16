@@ -1,11 +1,9 @@
 import styled from 'styled-components';
 import media from 'styled-media-query';
-import { withDarkModeActiveProps } from '@nandomoreira/@types';
 
 export const Hero = styled.section`
   align-items: center;
-  background-color: ${({ darkModeActive }: withDarkModeActiveProps) =>
-    darkModeActive ? `#272643` : `#F6FAFD`};
+  background-color: ${({ theme }) => theme?.backgroundColor};
   display: flex;
   font-size: 2rem;
   height: 100%;
@@ -19,8 +17,7 @@ export const Hero = styled.section`
 
 export const HeroInner = styled.div`
   align-items: center;
-  color: ${({ darkModeActive }: withDarkModeActiveProps) =>
-    darkModeActive ? `#F6FAFD` : `#272643`};
+  color: ${({ theme }) => theme?.textColor};
   display: flex;
   max-width: 1000px;
   flex-wrap: wrap;
@@ -45,8 +42,8 @@ export const HeroInner = styled.div`
     font-size: 16px;
     margin: 30px 0 10px;
     font-weight: 500;
-    color: ${({ darkModeActive }: withDarkModeActiveProps) =>
-      darkModeActive ? `rgba(229, 229, 229, 0.8)` : `rgba(44, 105, 141, 0.75)`};
+    color: ${({ theme }) => theme?.textColor};
+    opacity: 0.8;
 
     a {
       text-decoration: none;
@@ -62,8 +59,7 @@ export const HeroInner = styled.div`
     font-weight: 800;
     font-size: 18px;
     line-height: 1.4;
-    color: ${({ darkModeActive }: withDarkModeActiveProps) =>
-      darkModeActive ? `#f6fafd` : `#272643`};
+    color: ${({ theme }) => theme?.textColor};
 
     ${media.greaterThan('small')`
       font-size: 22px;
