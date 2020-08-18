@@ -61,13 +61,188 @@ Object {
 }
 `;
 
-exports[`<Avatar /> Render component with src prop 1`] = `
+exports[`<Avatar /> Render component with alt and src props 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
-    <div />
+    .c0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 240px 0 0;
+  -ms-flex: 240px 0 0;
+  flex: 240px 0 0;
+  height: 240px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 240px;
+}
+
+.c1 {
+  border-radius: 50%;
+  border: 2px solid;
+  display: inline-block;
+  height: 234px;
+  width: 234px;
+}
+
+<div>
+      <figure
+        class="c0"
+        width="240"
+      >
+        <img
+          alt="alternative text to image"
+          class="c1"
+          height="234"
+          loading="lazy"
+          src="/images/avatar.png"
+          width="234"
+        />
+      </figure>
+    </div>
   </body>,
-  "container": <div />,
+  "container": <div>
+    <figure
+      class="Avatarstyles__Figure-sc-20wegh-0 gygZLY"
+      width="240"
+    >
+      <img
+        alt="alternative text to image"
+        class="Avatarstyles__Image-sc-20wegh-1 jMpPZc"
+        height="234"
+        loading="lazy"
+        src="/images/avatar.png"
+        width="234"
+      />
+    </figure>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`<Avatar /> Render component with alt, src and width props 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    .c0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 300px 0 0;
+  -ms-flex: 300px 0 0;
+  flex: 300px 0 0;
+  height: 300px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 300px;
+}
+
+.c1 {
+  border-radius: 50%;
+  border: 2px solid;
+  display: inline-block;
+  height: 294px;
+  width: 294px;
+}
+
+<div>
+      <figure
+        class="c0"
+        width="300"
+      >
+        <img
+          alt="alternative text to image"
+          class="c1"
+          height="294"
+          loading="lazy"
+          src="/images/avatar.png"
+          width="294"
+        />
+      </figure>
+    </div>
+  </body>,
+  "container": <div>
+    <figure
+      class="Avatarstyles__Figure-sc-20wegh-0 lmRzxh"
+      width="300"
+    >
+      <img
+        alt="alternative text to image"
+        class="Avatarstyles__Image-sc-20wegh-1 iKVkAg"
+        height="294"
+        loading="lazy"
+        src="/images/avatar.png"
+        width="294"
+      />
+    </figure>
+  </div>,
   "debug": [Function],
   "findAllByAltText": [Function],
   "findAllByDisplayValue": [Function],

@@ -3,11 +3,11 @@ import media from 'styled-media-query';
 
 export const Hero = styled.section`
   align-items: center;
-  background-color: ${({ theme }) => theme?.backgroundColor};
   display: flex;
   font-size: 2rem;
   height: 100%;
   justify-content: center;
+  padding: 200px 0;
 
   ${media.greaterThan('medium')`
     min-height: 100vh;
@@ -19,11 +19,11 @@ export const HeroInner = styled.div`
   align-items: center;
   color: ${({ theme }) => theme?.textColor};
   display: flex;
-  max-width: 1000px;
+  max-width: 60rem;
   flex-wrap: wrap;
   text-align: center;
   justify-content: center;
-  padding: 0 30px;
+  padding: 0 1.875rem;
 
   ${media.greaterThan('medium')`
     flex-wrap: nowrap;
@@ -37,10 +37,17 @@ export const HeroInner = styled.div`
     `}
   }
 
+  &.--centered {
+    > div {
+      text-align: center;
+      margin: 0;
+    }
+  }
+
   h1 {
     font-weight: 600;
-    font-size: 16px;
-    margin: 30px 0 10px;
+    font-size: 1rem;
+    margin: 1.875rem 0 0.625rem;
     font-weight: 500;
     color: ${({ theme }) => theme?.textColor};
     opacity: 0.8;
@@ -50,23 +57,22 @@ export const HeroInner = styled.div`
     }
 
     ${media.greaterThan('medium')`
-      font-size: 18px;
-      margin: 0 0 10px;
+      font-size: 1.125rem;
+      margin: 0 0 0.625rem;
     `}
   }
 
   h2 {
-    font-weight: 800;
-    font-size: 18px;
-    line-height: 1.4;
+    font-size: 1.125rem;
+    line-height: ${({ theme }) => theme?.lineHeight};
     color: ${({ theme }) => theme?.textColor};
 
     ${media.greaterThan('small')`
-      font-size: 22px;
+      font-size: 1.375rem;
     `}
 
     ${media.greaterThan('medium')`
-      font-size: 30px;
+      font-size: 1.875rem;
       line-height: 1.54;
     `}
   }

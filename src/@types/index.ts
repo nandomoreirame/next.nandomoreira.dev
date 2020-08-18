@@ -5,6 +5,7 @@ export type SEO = {
   readonly favicon?: string;
   readonly image?: string;
   readonly ogImage?: string;
+  readonly subtitle?: string;
   readonly themeColor?: string;
   readonly title?: string;
   readonly url?: string;

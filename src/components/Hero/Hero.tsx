@@ -3,11 +3,12 @@ import * as s from './Hero.styles';
 
 type HeroProps = {
   children: React.ReactNode;
+  centered?: boolean;
 };
 
-const Hero: React.FC<HeroProps> = ({ children }: HeroProps) => (
+const Hero: React.FC<HeroProps> = ({ children, centered = false }: HeroProps) => (
   <s.Hero>
-    <s.HeroInner>{children}</s.HeroInner>
+    <s.HeroInner className={centered ? '--centered' : ''}>{children}</s.HeroInner>
   </s.Hero>
 );
 

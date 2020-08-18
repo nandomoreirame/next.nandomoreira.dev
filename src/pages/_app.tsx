@@ -1,22 +1,22 @@
-import { Fragment } from 'react';
 import { AppProps } from 'next/app';
-import withDarkMode, { useDarkMode } from 'next-dark-mode';
-import { GlobalStyles, theme } from '@nandomoreira/styles';
-import { Head } from '@nandomoreira/components';
-import { ThemeProvider } from 'styled-components';
+import withDarkMode, { useDarkMode, MODE } from 'next-dark-mode';
+import { Head, Layout } from '@nandomoreira/components';
+import { theme } from '@nandomoreira/styles';
 
 function App({ Component, pageProps }: AppProps) {
   const { darkModeActive } = useDarkMode();
 
   return (
-    <Fragment>
+    <Layout theme={darkModeActive ? theme.dark : theme.light}>
       <Head />
-      <ThemeProvider theme={darkModeActive ? theme.dark : theme.light}>
-        <GlobalStyles />
-        <Component {...pageProps} />
-      </ThemeProvider>
-    </Fragment>
+      <Component {...pageProps} />
+    </Layout>
   );
 }
 
-export default withDarkMode(App);
+export default withDarkMode(App, {
+  autoModeCookieName: `nandomoreira.dev-automode`,
+  darkModeCookieName: `nandomoreira.dev-darkmode`,
+  defaultMode: MODE.DARK,
+  provider: true,
+});

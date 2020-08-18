@@ -1,8 +1,16 @@
+const fontFamilyBase = `-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+  Cantarell, "Open Sans", "Helvetica Neue", sans-serif`;
+
 const defaultTheme = {
-  fontFamily: `-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
-    'Open Sans', 'Helvetica Neue', sans-serif`,
+  fontFamily: fontFamilyBase,
+  fontFamilyHeading: `"Montserrat", ${fontFamilyBase}`,
   fontSize: `1rem`,
   lineHeight: `1.4`,
+  fontWeight: {
+    medium: 500,
+    semiBold: 600,
+    bold: 800,
+  },
 };
 
 const darkColors = {

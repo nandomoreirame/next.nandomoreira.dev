@@ -9,7 +9,7 @@ import {
   AiOutlineDribbble,
   AiOutlineBehance,
 } from 'react-icons/ai';
-import { Hero, DarkMode, Avatar, Social } from '@nandomoreira/components';
+import { Hero, Avatar, Social } from '@nandomoreira/components';
 import { SocialLink } from '@nandomoreira/@types';
 
 const HomePage = () => {
@@ -74,7 +74,6 @@ const HomePage = () => {
           <Social socialLinks={socialLinks} />
         </div>
       </Hero>
-      <DarkMode />
     </Fragment>
   );
 };
