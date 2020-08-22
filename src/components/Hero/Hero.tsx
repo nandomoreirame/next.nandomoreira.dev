@@ -1,5 +1,5 @@
 import React, { memo } from 'react';
-import * as s from './Hero.styles';
+import * as S from './Hero.styles';
 
 type HeroProps = {
   children: React.ReactNode;
@@ -7,9 +7,9 @@ type HeroProps = {
 };
 
 const Hero: React.FC<HeroProps> = ({ children, centered = false }: HeroProps) => (
-  <s.Hero>
-    <s.HeroInner className={centered ? '--centered' : ''}>{children}</s.HeroInner>
-  </s.Hero>
+  <S.Hero>
+    <S.HeroInner className={centered ? '--centered' : ''}>{children}</S.HeroInner>
+  </S.Hero>
 );
 
 export default memo(Hero);

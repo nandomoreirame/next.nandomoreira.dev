@@ -1,10 +1,8 @@
 import React from 'react';
-import { render, cleanup } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import { DarkMode } from '.';
 
 describe('<DarkMode />', () => {
-  afterEach(cleanup);
-
   test('Render component', () => {
     const componentTree = render(<DarkMode />);
     expect(componentTree).toMatchSnapshot();

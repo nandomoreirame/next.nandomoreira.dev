@@ -1,11 +1,9 @@
 import React from 'react';
-import { render, cleanup } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import { Avatar } from '.';
 
 describe('<Avatar />', () => {
-  afterEach(cleanup);
-
-  test('Render component', () => {
+  test('Render Avatar Component', () => {
     const component = render(<Avatar />);
     expect(component).toMatchSnapshot();
   });

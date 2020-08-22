@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Avatar /> Render component 1`] = `
+exports[`<Avatar /> Render Avatar Component 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>

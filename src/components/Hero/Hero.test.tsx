@@ -1,10 +1,8 @@
 import React from 'react';
-import { render, cleanup } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import { Hero } from '.';
 
 describe('<Hero />', () => {
-  afterEach(cleanup);
-
   test('Render component', () => {
     const componentTree = render(<Hero />);
     expect(componentTree).toMatchSnapshot();

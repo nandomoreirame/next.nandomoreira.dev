@@ -1,11 +1,9 @@
 import React from 'react';
-import { render, cleanup } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import { AiOutlineGithub } from 'react-icons/ai';
 import { Social } from '.';
 
 describe('<Social />', () => {
-  afterEach(cleanup);
-
   test('Render component', () => {
     const componentTree = render(<Social />);
     expect(componentTree).toMatchSnapshot();
