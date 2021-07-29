@@ -6,10 +6,10 @@ import { PageHeader } from '@components';
 import whatsAppUrl from 'whatsapp-url';
 
 const AboutPage: NextPage = () => {
-  const [age, setAge] = React.useState();
+  const [age, setAge] = React.useState(32);
   const [pageTitle] = React.useState('Sobre mim');
-  const [pageDescription] = React.useState('Um programador não por formação mas por vocação');
-  // const [pageDescription] = React.useState('Nem vlogueiro, nem RoskStar... Programador.');
+  // const [pageDescription] = React.useState('Um programador não por formação mas por vocação');
+  const [pageDescription] = React.useState('Nem funkeiro, nem RoskStar... Programador.');
 
   React.useEffect(() => {
     setAge(new Date().getFullYear() - 1989);
@@ -77,7 +77,7 @@ const AboutPage: NextPage = () => {
           </p>
           <p>
             Já passei por algumas tantas empresas, dentre elas{' '}
-            <strike>
+            <span>
               <a
                 href="http://www.malapronta.com.br/"
                 rel="nofollow noopener noreferrer"
@@ -85,7 +85,7 @@ const AboutPage: NextPage = () => {
               >
                 MalaPronta
               </a>
-            </strike>{' '}
+            </span>{' '}
             ,{' '}
             <strong>
               <a href="https://www.pipefy.com/" rel="nofollow noopener noreferrer" target="_blank">
@@ -93,7 +93,7 @@ const AboutPage: NextPage = () => {
               </a>
             </strong>{' '}
             e{' '}
-            <strike>
+            <span>
               <a
                 href="https://www.lojaskd.com.br/"
                 rel="nofollow noopener noreferrer"
@@ -101,7 +101,7 @@ const AboutPage: NextPage = () => {
               >
                 LojasKD
               </a>
-            </strike>{' '}
+            </span>{' '}
             se destacam por ter trabalhado em um único produto, onde acumulei skylls de{' '}
             <strong>
               <em>Front-end</em>
