@@ -1,4 +1,8 @@
-.next
-coverage
-public
-out
+# Add files here to ignore them from prettier formatting
+
+/.next
+/out
+/dist
+/public
+/coverage
+.vscode

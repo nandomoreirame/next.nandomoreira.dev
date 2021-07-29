@@ -1,0 +1,36 @@
+import { extendTheme, ThemeConfig } from '@chakra-ui/react';
+import borders from './borders';
+import breakpoints from './breakpoints';
+import colors from './colors';
+import radii from './radius';
+import shadows from './shadows';
+import sizes from './sizes';
+import space from './spacing';
+import transition from './transition';
+import typography from './typography';
+import zIndices from './z-index';
+import blur from './blur';
+
+export * from './global';
+
+export const themeConfig: ThemeConfig = {
+  useSystemColorMode: true,
+  initialColorMode: 'dark',
+  cssVarPrefix: '',
+};
+
+export const theme = extendTheme({
+  direction: 'ltr',
+  config: themeConfig,
+  breakpoints,
+  zIndices,
+  radii,
+  blur,
+  colors,
+  ...typography,
+  sizes,
+  shadows,
+  space,
+  borders,
+  transition,
+});

@@ -1,22 +1,16 @@
 import { AppProps } from 'next/app';
-import withDarkMode, { useDarkMode, MODE } from 'next-dark-mode';
-import { Head, Layout } from '@nandomoreira/components';
-import { theme } from '@nandomoreira/styles';
+import { ChakraProvider, CSSReset } from '@chakra-ui/react';
+import { Global } from '@emotion/react';
+import { GlobalStyles, theme } from '@theme';
 
 function App({ Component, pageProps }: AppProps) {
-  const { darkModeActive } = useDarkMode();
-
   return (
-    <Layout theme={darkModeActive ? theme.dark : theme.light}>
-      <Head />
+    <ChakraProvider theme={theme}>
+      <CSSReset />
+      <Global styles={GlobalStyles} />
       <Component {...pageProps} />
-    </Layout>
+    </ChakraProvider>
   );
 }
 
-export default withDarkMode(App, {
-  autoModeCookieName: `nandomoreira.dev-automode`,
-  darkModeCookieName: `nandomoreira.dev-darkmode`,
-  defaultMode: MODE.DARK,
-  provider: true,
-});
+export default App;
