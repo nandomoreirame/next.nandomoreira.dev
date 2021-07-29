@@ -1,38 +1,29 @@
-import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
-import { Fragment } from 'react';
-import { ServerStyleSheet } from 'styled-components';
+import * as React from 'react';
+import NextDocument, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
+import { ColorModeScript } from '@chakra-ui/react';
+import { themeConfig } from '@theme';
 
-export default class MyDocument extends Document {
+import 'regenerator-runtime/runtime';
+
+class Document extends NextDocument<{}> {
   static async getInitialProps(ctx: DocumentContext) {
-    const sheet = new ServerStyleSheet();
-    const originalRenderPage = ctx.renderPage;
-
-    try {
-      ctx.renderPage = () =>
-        originalRenderPage({
-          enhanceApp: (App) => (props) => sheet.collectStyles(<App {...props} />),
-        });
-
-      const initialProps = await Document.getInitialProps(ctx);
-      return {
-        ...initialProps,
-        styles: (
-          <Fragment>
-            {initialProps.styles}
-            {sheet.getStyleElement()}
-          </Fragment>
-        ),
-      };
-    } finally {
-      sheet.seal();
-    }
+    const initialProps = await NextDocument.getInitialProps(ctx);
+    return { ...initialProps };
   }
 
   render() {
     return (
-      <Html lang="pt-BR">
-        <Head />
+      <Html lang="pt-br">
+        <Head>
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&display=swap"
+            rel="stylesheet"
+          />
+        </Head>
         <body>
+          <ColorModeScript initialColorMode={themeConfig.initialColorMode} />
           <Main />
           <NextScript />
         </body>
@@ -40,3 +31,5 @@ export default class MyDocument extends Document {
     );
   }
 }
+
+export default Document;

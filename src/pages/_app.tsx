@@ -1,13 +1,15 @@
-import { Fragment } from 'react';
 import { AppProps } from 'next/app';
-import { GlobalStyles } from '@nandomoreira/styles';
+import { ChakraProvider, CSSReset } from '@chakra-ui/react';
+import { Global } from '@emotion/react';
+import { GlobalStyles, theme } from '@theme';
 
 function App({ Component, pageProps }: AppProps) {
   return (
-    <Fragment>
-      <GlobalStyles />
+    <ChakraProvider theme={theme}>
+      <CSSReset />
+      <Global styles={GlobalStyles} />
       <Component {...pageProps} />
-    </Fragment>
+    </ChakraProvider>
   );
 }
 

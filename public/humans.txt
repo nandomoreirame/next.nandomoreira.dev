@@ -1,0 +1,13 @@
+/* TEAM */
+  Title: Fernando Moreira
+  Name: Fernando Moreira | Desenvolvedor front-end e WordPress em Curitiba/PR
+  Site: https://nandomoreira.dev
+  Contact: hi@nandomoreira.dev
+  Twitter: @oseunando
+  Location: Curitiba, Paraná, Brazil
+
+/* SITE */
+  Language: Portuguese
+  Doctype: HTML5
+  IDE: Visual Studio Code - Insiders
+  Tech stack: JavaScript, TypeScript, React.js, Next.js
