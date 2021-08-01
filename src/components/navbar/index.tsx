@@ -37,7 +37,7 @@ export const Navbar: React.FC<NavbarProps> = ({ links = [] }: NavbarProps) => {
       >
         <Container maxW="container.lg">
           <HStack justify="space-between" w="100%" h={16}>
-            <Heading>
+            <Heading px={{ base: 4, md: 2 }}>
               <NextLink href="/" passHref>
                 n
               </NextLink>

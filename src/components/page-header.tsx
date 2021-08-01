@@ -17,16 +17,17 @@ export const PageHeader: React.FC<PageHeaderProps> = ({ title, description }: Pa
     >
       <Container maxW="container.lg">
         <Heading
-          as="h3"
-          size="sm"
+          as="h1"
+          color={useColorModeValue('gray.500', 'gray.400')}
+          fontSize={{ base: 'lg', lg: 'xl' }}
           textTransform="uppercase"
-          fontWeight={'normal'}
-          fontFamily={'body'}
-          mb={3}
+          fontFamily="heading"
+          letterSpacing="tight"
+          mb="3"
         >
           {title}
         </Heading>
-        <Heading as="h1" size="2xl" fontFamily={'heading'}>
+        <Heading as="p" size="2xl" fontFamily={'heading'}>
           {description}
         </Heading>
       </Container>

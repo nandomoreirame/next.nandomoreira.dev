@@ -9,7 +9,7 @@ const AboutPage: NextPage = () => {
   const [age, setAge] = React.useState(32);
   const [pageTitle] = React.useState('Sobre mim');
   // const [pageDescription] = React.useState('Um programador não por formação mas por vocação');
-  const [pageDescription] = React.useState('Nem funkeiro, nem RoskStar... Programador.');
+  const [pageDescription] = React.useState('Nem Funkeiro, nem RoskStar... Programador.');
 
   React.useEffect(() => {
     setAge(new Date().getFullYear() - 1989);

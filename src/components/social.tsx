@@ -83,7 +83,7 @@ export const Social: React.FC = () => {
           display={{ base: 'block', md: 'flex' }}
           textAlign={'center'}
           justifyContent={{ md: 'flex-start' }}
-          _before={{ md: beforeNav }}
+          _before={{ lg: beforeNav }}
           mt={5}
         >
           {socialLinks.map(({ link, title, icon }: SocialLinkProps) => (
