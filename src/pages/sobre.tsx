@@ -3,7 +3,7 @@ import { NextPage } from 'next';
 import { DefaultLayout } from '@layouts/default';
 import { Container, Heading, Box } from '@chakra-ui/react';
 import { PageHeader } from '@components';
-import whatsAppUrl from 'whatsapp-url';
+import { whatsappLink } from '@util';
 
 const AboutPage: NextPage = () => {
   const [age, setAge] = React.useState(32);
@@ -267,14 +267,7 @@ const AboutPage: NextPage = () => {
                 Telegram
               </a>{' '}
               ou no{' '}
-              <a
-                href={whatsAppUrl({
-                  phone: 5541984401163,
-                  text: 'Olá Fernando! Eu vi o seu site, e gostaria de conversar.',
-                })}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href={whatsappLink()} target="_blank" rel="noopener noreferrer">
                 WhatsApp
               </a>
               .

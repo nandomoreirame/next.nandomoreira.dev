@@ -23,15 +23,12 @@ import {
   AiOutlineTwitter,
   AiOutlineWhatsApp,
 } from 'react-icons/ai';
-import whatsAppUrl from 'whatsapp-url';
+import { whatsappLink } from '@util';
 
 const socialLinks: SocialLinkProps[] = [
   {
     title: 'Whatsapp',
-    link: whatsAppUrl({
-      phone: 5541984401163,
-      text: 'Olá Fernando! Eu vi o seu site, e gostaria de conversar.',
-    }),
+    link: whatsappLink(),
     icon: <Icon as={AiOutlineWhatsApp} boxSize="26px" />,
   },
   {
@@ -134,7 +131,7 @@ export const Hero: React.FC<{}> = () => {
             lineHeight="1.4"
           >
             Ajudo empresas a criar projetos web personalizados, de alta qualidade e com{' '}
-            <Text as="span" color={useColorModeValue('teal.500', 'teal.300')}>
+            <Text as="span" color={useColorModeValue('teal.800', 'teal.300')}>
               tecnologias criativas.
             </Text>
           </chakra.h1>
