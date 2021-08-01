@@ -28,13 +28,16 @@ export const NavLink: React.FC<NavLinkProps> = ({ href, name, ...rest }: NavLink
     <NextLink href={href} passHref>
       <Button
         aria-current={isActive ? 'page' : undefined}
+        display={{ base: 'block', md: 'inline-block' }}
+        width={{ base: '100%', md: 'auto' }}
         variant="ghost"
         size="md"
         {...rest}
         _activeLink={{
           color: useColorModeValue('blue.500', 'blue.200'),
         }}
-        px={4}
+        px={{ base: 0, md: 4 }}
+        my={{ base: 8, md: 0 }}
       >
         {name}
       </Button>

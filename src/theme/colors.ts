@@ -3,8 +3,8 @@ import { Colors } from '@chakra-ui/react';
 const colors: Colors = {
   transparent: 'transparent',
   current: 'currentColor',
-  black: '#000000',
-  white: '#FFFFFF',
+  black: '#000',
+  white: '#fff',
   whiteAlpha: {
     50: 'rgba(255, 255, 255, 0.04)',
     100: 'rgba(255, 255, 255, 0.06)',
