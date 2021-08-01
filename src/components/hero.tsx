@@ -6,67 +6,12 @@ import {
   chakra,
   useColorModeValue,
   Text,
-  Icon,
   AvatarBadge,
   Tooltip,
   Avatar,
 } from '@chakra-ui/react';
 import avatar from '@images/avatar.png';
-import { Social, SocialLinkProps } from '@components';
-import {
-  AiFillLinkedin,
-  AiOutlineBehance,
-  AiOutlineCodepen,
-  AiOutlineDribbble,
-  AiOutlineGithub,
-  AiOutlineInstagram,
-  AiOutlineTwitter,
-  AiOutlineWhatsApp,
-} from 'react-icons/ai';
-import { whatsappLink } from '@util';
-
-const socialLinks: SocialLinkProps[] = [
-  {
-    title: 'Whatsapp',
-    link: whatsappLink(),
-    icon: <Icon as={AiOutlineWhatsApp} boxSize="26px" />,
-  },
-  {
-    title: 'Github',
-    link: 'https://github.com/nandomoreirame',
-    icon: <Icon as={AiOutlineGithub} boxSize="26px" />,
-  },
-  {
-    title: 'Twitter',
-    link: 'https://twitter.com/oseunando',
-    icon: <Icon as={AiOutlineTwitter} boxSize="26px" />,
-  },
-  {
-    title: 'Instagram',
-    link: 'https://instagram.com/oseunando',
-    icon: <Icon as={AiOutlineInstagram} boxSize="26px" />,
-  },
-  {
-    title: 'Codepen.io',
-    link: 'https://codepen.io/oseunando',
-    icon: <Icon as={AiOutlineCodepen} boxSize="26px" />,
-  },
-  {
-    title: 'LinkedIn',
-    link: 'https://linkedin.com/in/nandomoreirame',
-    icon: <Icon as={AiFillLinkedin} boxSize="26px" />,
-  },
-  {
-    title: 'Dribbble',
-    link: 'https://dribbble.com/umdevux',
-    icon: <Icon as={AiOutlineDribbble} boxSize="26px" />,
-  },
-  {
-    title: 'Behance',
-    link: 'https://www.behance.net/umdevux',
-    icon: <Icon as={AiOutlineBehance} boxSize="26px" />,
-  },
-];
+import { Social } from '@components';
 
 export const Hero: React.FC<{}> = () => {
   const [available, setAvailable] = React.useState(false);
@@ -84,14 +29,21 @@ export const Hero: React.FC<{}> = () => {
     <Stack
       as={Box}
       minH="100vh"
-      w="100vw"
-      display="flex"
+      w={{ md: '100vw' }}
+      display={{ md: 'flex' }}
+      pt={{ base: 28, md: 0 }}
+      pb={{ base: 20, md: 0 }}
       alignItems="center"
       justifyContent="center"
       bg={useColorModeValue('gray.100', 'gray.900')}
     >
-      <Container maxW="container.lg" display="flex" alignItems="center">
-        <Box pr={4} maxW="240px">
+      <Container
+        alignItems={{ md: 'center' }}
+        display={{ base: 'block', md: 'flex' }}
+        maxW="container.lg"
+        textAlign={{ base: 'center', md: 'left' }}
+      >
+        <Box pr={{ base: 0, md: 4 }} mb={{ base: 10, md: 0 }} maxW={{ base: '100%', md: '240' }}>
           <Avatar
             size={'3xl'}
             name="Fernando Moreira"
@@ -99,6 +51,8 @@ export const Hero: React.FC<{}> = () => {
             bg={useColorModeValue('gray.100', 'gray.900')}
             borderColor={useColorModeValue('gray.400', 'gray.100')}
             borderWidth="2px"
+            display={{ base: 'inline-block', md: 'flex' }}
+            w={{ base: 160, md: 220 }}
             p={2}
           >
             <Tooltip label={availableText} color="white" placement="top" bg={availableBg} hasArrow>
@@ -107,8 +61,8 @@ export const Hero: React.FC<{}> = () => {
                 bg={availableBg}
                 borderColor={useColorModeValue('gray.100', 'gray.900')}
                 cursor="pointer"
-                right="35px"
-                bottom="15px"
+                right={{ base: 4, md: '35px' }}
+                bottom={{ base: 4, md: '15px' }}
               />
             </Tooltip>
           </Avatar>
@@ -135,7 +89,7 @@ export const Hero: React.FC<{}> = () => {
               tecnologias criativas.
             </Text>
           </chakra.h1>
-          <Social links={socialLinks} />
+          <Social />
         </Box>
       </Container>
     </Stack>

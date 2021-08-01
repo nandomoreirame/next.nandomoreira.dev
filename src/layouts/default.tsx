@@ -31,7 +31,7 @@ export const DefaultLayout: React.FC<DefaultLayoutProps> = ({
           {children}
         </Box>
       )}
-      <ThemeToogle fixed />
+      <ThemeToogle />
     </BlankLayout>
   );
 };

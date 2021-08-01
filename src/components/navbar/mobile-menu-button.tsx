@@ -1,34 +1,26 @@
 import * as React from 'react';
-import { Text, useColorModeValue } from '@chakra-ui/react';
-import { ToggleButton } from './styles';
+import { Button, ButtonProps, Text, useColorModeValue } from '@chakra-ui/react';
 
-type MobileMenuButtonProps = VStack & {
+interface MobileMenuButtonProps extends ButtonProps {
   label?: string;
   icon?: React.ReactNode;
-  fixed?: boolean;
-  light?: boolean;
-};
+}
 
 export const MobileMenuButton: React.FC<MobileMenuButtonProps> = ({
   label,
   icon,
-  light = false,
-  fixed = false,
   ...rest
 }: MobileMenuButtonProps) => {
+  const labelColor = useColorModeValue('gray.600', 'gray.200');
+
   return (
-    <ToggleButton
-      as="button"
-      spacing={0}
-      rounded="md"
-      px={6}
-      {...rest}
-      color={useColorModeValue('blue.600', 'blue.200')}
-    >
+    <Button variant="ghost" size="md" rounded="md" px={3} py={6} {...rest}>
       {icon}
-      <Text fontSize="xs" fontWeight="500" color={useColorModeValue('gray.600', 'gray.200')}>
-        {label}
-      </Text>
-    </ToggleButton>
+      {label && (
+        <Text fontSize="xs" fontWeight="500" color={labelColor}>
+          {label}
+        </Text>
+      )}
+    </Button>
   );
 };

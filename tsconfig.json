@@ -25,7 +25,7 @@
       "@theme": ["theme/index.ts"],
       "@util": ["util/index.ts"]
     },
-    "typeRoots": [ "@types", "./types", "./node_modules/@types"]
+    "typeRoots": [ "@types", "./src/types", "./node_modules/@types"]
   },
   "include": ["next-env.d.ts", "styled.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
