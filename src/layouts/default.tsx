@@ -25,9 +25,9 @@ export const DefaultLayout: React.FC<DefaultLayoutProps> = ({
           { href: '/contato', name: 'Contato' },
         ]}
       />
-      {noSpace && <>{children}</>}
+      {noSpace && <main>{children}</main>}
       {!noSpace && (
-        <Box pt={16} pb={16}>
+        <Box as="main" pt={16} pb={16}>
           {children}
         </Box>
       )}

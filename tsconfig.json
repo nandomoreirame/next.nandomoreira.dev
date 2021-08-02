@@ -18,10 +18,11 @@
     "paths": {
       "@images/*": ["images/*"],
       "@components": ["components/index.ts"],
-      "@constants": ["constants/index.ts"],
       "@contexts": ["contexts/index.ts"],
       "@hooks": ["hooks/index.ts"],
       "@layouts/*": ["layouts/*"],
+      "@queries": ["queries/index.ts"],
+      "@services/*": ["services/*"],
       "@theme": ["theme/index.ts"],
       "@util": ["util/index.ts"]
     },

@@ -4,6 +4,7 @@ module.exports = {
   rules: {
     'no-unused-vars': 'warn',
     'react/no-unescaped-entities': 'off',
+    'import/no-anonymous-default-export': 'off',
     '@next/next/no-page-custom-font': 'off',
   },
 };

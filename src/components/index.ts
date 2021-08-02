@@ -6,3 +6,4 @@ export * from './navbar';
 export * from './navbar/mobile-menu-button';
 export * from './page-header';
 export * from './available-bar';
+export * from './content';

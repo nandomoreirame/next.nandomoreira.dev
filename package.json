@@ -1,14 +1,22 @@
 {
-  "name": "nandomoreira.dev",
+  "name": "@nandomoreirame/website",
   "version": "2.0.0",
   "description": "Website de Fernando Moreira",
-  "homepage": "https://next-nandomoreira-dev.netlify.app",
+  "homepage": "https://website-nandomoreira.vercel.app",
+  "repository": "https://github.com/nandomoreirame/website",
   "license": "MIT",
   "private": true,
+  "workspaces": {
+    "packages": [
+      "sanity"
+    ]
+  },
   "scripts": {
-    "clean": "rm -rf .next out",
-    "dev": "next dev",
-    "build": "yarn clean && next build",
+    "clean": "rm -rf .next out public/sanity",
+    "dev": "cp .env ./sanity/.env.development && concurrently \"next dev\" \"yarn workspace @nandomoreirame/sanity start\"",
+    "build": "yarn clean && yarn build:sanity && yarn build:next",
+    "build:sanity": "echo 'Building Sanity to public/sanity' && yarn workspace @nandomoreirame/sanity build ../public/sanity -y",
+    "build:next": "next build",
     "export": "next export",
     "start": "next start",
     "deploy": "yarn build && next export && netlify deploy --prod",
@@ -19,8 +27,12 @@
     "@chakra-ui/react": "^1.6.4",
     "@emotion/react": "^11.4.0",
     "@emotion/styled": "^11.3.0",
+    "@sanity/block-content-to-react": "^3.0.0",
+    "@sanity/client": "^2.13.0",
+    "airtable": "^0.11.1",
     "classnames": "^2.3.1",
     "framer-motion": "^4.1.17",
+    "groq": "^2.13.0",
     "next": "11.0.1",
     "next-seo": "^4.26.0",
     "react": "17.0.2",
@@ -34,6 +46,7 @@
     "@commitlint/config-conventional": "^12.1.4",
     "@types/node": "^16.0.0",
     "@types/react": "^17.0.13",
+    "concurrently": "^6.2.0",
     "eslint": "7.30.0",
     "eslint-config-next": "11.0.1",
     "eslint-config-prettier": "^8.3.0",
