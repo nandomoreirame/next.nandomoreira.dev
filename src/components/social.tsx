@@ -96,6 +96,7 @@ export const Social: React.FC = () => {
               hasArrow
             >
               <Button
+                as="a"
                 display="inline-block"
                 variant="ghost"
                 size="md"
@@ -104,6 +105,8 @@ export const Social: React.FC = () => {
                 mx={2}
                 href={link}
                 transition="all .23s ease-in-out"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 {icon}
               </Button>
