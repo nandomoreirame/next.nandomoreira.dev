@@ -99,8 +99,8 @@ export const Hero: React.FC<{}> = () => {
                 left: 0,
               }}
             >
-              <NextLink itemProp="url" href="/sobre" passHref>
-                Fernando Moreira
+              <NextLink href="/sobre" passHref>
+                <a itemProp="url">Fernando Moreira</a>
               </NextLink>
               <meta itemProp="jobTitle" content="desenvolvedor front-end" />
               <meta itemProp="worksFor" content="Onedev.studio" />
