@@ -21,28 +21,19 @@ export const ThemeToogle: React.FC = () => {
   };
 
   return (
-    <Box
-      position="fixed"
-      zIndex={99}
-      right={10}
-      bottom={10}
-      rounded="md"
-      backgroundColor={useColorModeValue('white', 'gray.800')}
-    >
-      <MobileMenuButton
-        icon={
-          colorMode === 'dark' ? (
-            <ScaleFade initialScale={0.9} in>
-              <Icon as={BiSun} boxSize="36px" />
-            </ScaleFade>
-          ) : (
-            <ScaleFade initialScale={0.9} in>
-              <Icon as={BiMoon} boxSize="36px" />
-            </ScaleFade>
-          )
-        }
-        onClick={handleClick}
-      />
-    </Box>
+    <MobileMenuButton
+      icon={
+        colorMode === 'dark' ? (
+          <ScaleFade initialScale={0.9} in>
+            <Icon as={BiSun} boxSize="36px" />
+          </ScaleFade>
+        ) : (
+          <ScaleFade initialScale={0.9} in>
+            <Icon as={BiMoon} boxSize="36px" />
+          </ScaleFade>
+        )
+      }
+      onClick={handleClick}
+    />
   );
 };

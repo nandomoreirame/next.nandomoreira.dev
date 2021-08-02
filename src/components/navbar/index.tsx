@@ -8,9 +8,11 @@ import {
   ScaleFade,
   Icon,
   useDisclosure,
+  Text,
 } from '@chakra-ui/react';
 import { IoMenuOutline } from 'react-icons/io5';
 import NextLink from 'next/link';
+import { ThemeToogle } from '@components';
 import { NavLink, NavLinkProps } from './navlink';
 import { MobileMenuButton } from './mobile-menu-button';
 import { MobileNav } from './mobile-nav';
@@ -37,9 +39,21 @@ export const Navbar: React.FC<NavbarProps> = ({ links = [] }: NavbarProps) => {
       >
         <Container maxW="container.lg">
           <HStack justify="space-between" w="100%" h={16}>
-            <Heading px={{ base: 4, md: 2 }}>
+            <Heading
+              px={{ base: 4, md: 2 }}
+              color={useColorModeValue('gray.900', 'white')}
+              fontSize={{ base: '1.42rem' }}
+              _before={{ content: '"{ "' }}
+              _after={{ content: '" }"' }}
+              cursor="pointer"
+            >
               <NextLink href="/" passHref>
-                n
+                <>
+                  nando
+                  <Text as="span" color={useColorModeValue('teal.800', 'teal.500')}>
+                    moreira
+                  </Text>
+                </>
               </NextLink>
             </Heading>
 
@@ -47,6 +61,8 @@ export const Navbar: React.FC<NavbarProps> = ({ links = [] }: NavbarProps) => {
               {links.length > 0 &&
                 links.map(({ href, name }) => <NavLink key={href} href={href} name={name} />)}
             </HStack>
+
+            <ThemeToogle />
 
             <Box display={{ base: 'inline-block', md: 'none' }}>
               <MobileMenuButton
