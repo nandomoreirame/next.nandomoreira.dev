@@ -6,10 +6,10 @@ export const whatsappLink = (
   text = 'Oi Nando! Eu vi o seu site, e gostaria de conversar.',
 ) => WhatsAppUrl({ phone, text });
 
-export const contentToPlainText = (blocks: BlockContent = []) =>
+export const contentToPlainText = (blocks: Array<BlockContent> = []): string =>
   blocks
-    .map(block => {
+    .map((block: BlockContent) => {
       if (block._type !== 'block' || !block.children) return '';
-      return block.children.map(child => child.text).join('');
+      return block.children.map(child => child?.text).join('');
     })
     .join('\n\n');

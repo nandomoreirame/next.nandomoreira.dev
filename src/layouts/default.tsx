@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Navbar } from '@components';
+import { Navbar, ThemeToogle } from '@components';
 import { BlankLayout } from './blank';
 import { Box } from '@chakra-ui/react';
 
@@ -31,6 +31,7 @@ export const DefaultLayout: React.FC<DefaultLayoutProps> = ({
           {children}
         </Box>
       )}
+      <ThemeToogle />
     </BlankLayout>
   );
 };

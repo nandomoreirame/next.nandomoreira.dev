@@ -1,5 +1,5 @@
 import React from 'react';
-import { GetStaticProps, NextPage } from 'next';
+import { NextPage } from 'next';
 import NextLink from 'next/link';
 import { Container, Text } from '@chakra-ui/react';
 import { DefaultLayout } from '@layouts/default';
@@ -36,7 +36,7 @@ const PortfolioPage: NextPage<PortfolioPageProps> = ({ portfolio }: PortfolioPag
   );
 };
 
-export async function getStaticProps(): GetStaticProps {
+export async function getStaticProps() {
   const portfolio: Array<Portfolio> = await sanity.fetch(PortfolioListQ);
 
   // eslint-disable-next-line no-console

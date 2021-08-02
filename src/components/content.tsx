@@ -21,7 +21,7 @@ export const Content: React.FC<ContentProps> = ({ content }: ContentProps) => {
   const serializers = {
     types: {
       // eslint-disable-next-line react/display-name
-      code: props => (
+      code: (props: any) => (
         <pre data-language={props.node.language}>
           <code>{props.node.code}</code>
         </pre>

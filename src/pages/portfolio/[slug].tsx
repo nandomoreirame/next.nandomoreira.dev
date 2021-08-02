@@ -1,5 +1,5 @@
 import React from 'react';
-import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
+import { GetStaticPropsContext, NextPage } from 'next';
 import { Container, Heading } from '@chakra-ui/react';
 import { DefaultLayout } from '@layouts/default';
 import { sanity } from '@services/sanify';
@@ -33,8 +33,8 @@ const ProjectSinglePage: NextPage<ProjectSinglePageProps> = ({
   );
 };
 
-export async function getStaticPaths(): GetStaticPaths<{ slug: string }> {
-  const portfolio = await sanity.fetch(PortfolioListQ);
+export async function getStaticPaths() {
+  const portfolio: Array<Portfolio> = await sanity.fetch(PortfolioListQ);
 
   const paths = portfolio.map(item => {
     return {
@@ -53,8 +53,9 @@ export async function getStaticPaths(): GetStaticPaths<{ slug: string }> {
   };
 }
 
-export async function getStaticProps({ params }): GetStaticProps {
-  const portfolio = await sanity.fetch(PortfolioSingleQ, { slug: params.slug });
+export async function getStaticProps({ params }: GetStaticPropsContext) {
+  const slug = (params?.slug as string) || '';
+  const portfolio: Array<Portfolio> = await sanity.fetch(PortfolioSingleQ, { slug });
 
   // eslint-disable-next-line no-console
   console.log(portfolio);
