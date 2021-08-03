@@ -40,5 +40,5 @@ public/sanity
 storybook-static
 !.vscode
 
-# Local Netlify folder
-.netlify
+# Local vercel folder
+.vercel

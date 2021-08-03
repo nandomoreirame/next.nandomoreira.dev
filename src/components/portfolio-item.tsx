@@ -15,19 +15,18 @@ export const PortfolioItem: React.FC<PortfolioItemProps> = ({
 }: PortfolioItemProps) => (
   <NextLink href={`/portfolio/${portfolio.slug.current}`} passHref>
     <Box as="a">
-      <HStack
+      <Box
         p={4}
-        my={10}
+        my={{ base: 4, md: 8 }}
         cursor="pointer"
+        display={{ md: 'flex' }}
         bg={useColorModeValue('white', 'gray.800')}
         rounded="xl"
         borderWidth="1px"
         borderColor={useColorModeValue('gray.100', 'gray.700')}
         w="100%"
-        minHeight={{ base: 'auto', md: '260px' }}
-        flexDirection={index % 2 === 0 ? 'row' : 'row-reverse'}
-        align="center"
-        spacing={4}
+        flexDirection={{ md: index % 2 === 0 ? 'row' : 'row-reverse' }}
+        alignItems="center"
         transition="all 0.25s"
         transition-timing-function="spring(1 100 10 10)"
         _hover={{ transform: 'translateY(-4px)', shadow: 'sm' }}
@@ -38,10 +37,11 @@ export const PortfolioItem: React.FC<PortfolioItemProps> = ({
           )}
         </Box>
         <Box
-          textAlign={index % 2 === 0 ? 'left' : 'right'}
+          textAlign={{ md: index % 2 === 0 ? 'left' : 'right' }}
           w={{ base: '100%', md: '45%' }}
-          pl={index % 2 === 0 ? 3 : 0}
-          pr={index % 2 === 0 ? 0 : 6}
+          pl={{ md: index % 2 === 0 ? 3 : 0 }}
+          pr={{ md: index % 2 === 0 ? 0 : 6 }}
+          my={{ base: 6, md: 0 }}
         >
           <Heading as="h2" fontWeight="bold" fontSize="lg" mb={3}>
             {portfolio.title}
@@ -53,7 +53,7 @@ export const PortfolioItem: React.FC<PortfolioItemProps> = ({
             Publicado: {timesAgoFormatter(portfolio?.publishedAt)}
           </Text>
         </Box>
-      </HStack>
+      </Box>
     </Box>
   </NextLink>
 );

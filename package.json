@@ -19,7 +19,8 @@
     "build:next": "next build",
     "export": "next export",
     "start": "next start",
-    "deploy": "yarn build && next export && netlify deploy --prod",
+    "vercel": "vercel",
+    "deploy": "yarn vercel deploy --prod",
     "eslint": "eslint . --ext \".js,.ts,.tsx,.jsx\" --max-warnings=0",
     "prettier": "prettier --write ."
   },
@@ -55,10 +56,10 @@
     "eslint-plugin-prettier": "^3.4.0",
     "husky": "^7.0.0",
     "identity-obj-proxy": "^3.0.0",
-    "netlify-cli": "^4.0.5",
     "prettier": "^2.3.2",
     "react-docgen-typescript-loader": "^3.7.2",
     "ts-loader": "^9.2.3",
-    "typescript": "^4.3.5"
+    "typescript": "^4.3.5",
+    "vercel": "^23.0.1"
   }
 }
