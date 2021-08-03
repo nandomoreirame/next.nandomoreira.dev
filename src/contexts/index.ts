@@ -1,3 +1,0 @@
-export const CONSTANT = {
-  // Write something here...
-};

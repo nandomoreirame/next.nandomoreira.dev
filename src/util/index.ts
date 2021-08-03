@@ -1,6 +1,6 @@
 import WhatsAppUrl from 'whatsapp-url';
 import { format, register } from 'timeago.js';
-import { BlockContent } from 'types/portfolio';
+import { BlockContent } from '@interfaces';
 
 export const whatsappLink = (
   phone = 5541984401163,

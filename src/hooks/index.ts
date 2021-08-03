@@ -1,3 +1,0 @@
-export const useHook = () => {
-  // Write something here...
-};

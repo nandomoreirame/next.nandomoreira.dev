@@ -5,7 +5,7 @@ import { DefaultLayout } from '@layouts/default';
 import { PageHeader, PortfolioItem } from '@components';
 import { PortfolioListQ } from '@queries';
 import { sanity } from '@services/sanify';
-import { Portfolio } from 'types/portfolio';
+import { Portfolio } from '@interfaces';
 
 type PortfolioPageProps = {
   portfolio: Array<Portfolio>;

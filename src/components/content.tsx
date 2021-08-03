@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { BlockContent } from 'types/portfolio';
+import { BlockContent } from '@interfaces';
 import styled from '@emotion/styled';
 import SanityBlockContent from '@sanity/block-content-to-react';
 

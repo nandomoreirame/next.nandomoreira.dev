@@ -5,7 +5,7 @@ import { DefaultLayout } from '@layouts/default';
 import { sanity } from '@services/sanify';
 import { PortfolioListQ, PortfolioSingleQ } from '@queries';
 import { Content, PageHeader } from '@components';
-import { Portfolio } from 'types/portfolio';
+import { Portfolio } from '@interfaces';
 import { contentToPlainText } from '@util';
 
 type ProjectSinglePageProps = {

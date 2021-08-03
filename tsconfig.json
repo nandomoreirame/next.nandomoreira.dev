@@ -14,19 +14,18 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
+    "typeRoots": [ "@types", "./node_modules/@types"],
     "baseUrl": "src",
     "paths": {
       "@images/*": ["images/*"],
+      "@interfaces": ["interfaces/index.ts"],
       "@components": ["components/index.ts"],
-      "@contexts": ["contexts/index.ts"],
-      "@hooks": ["hooks/index.ts"],
       "@layouts/*": ["layouts/*"],
       "@queries": ["queries/index.ts"],
       "@services/*": ["services/*"],
       "@theme": ["theme/index.ts"],
       "@util": ["util/index.ts"]
-    },
-    "typeRoots": [ "@types", "./src/types", "./node_modules/@types"]
+    }
   },
   "include": ["next-env.d.ts", "styled.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]

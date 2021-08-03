@@ -1,7 +1,7 @@
 import * as React from 'react';
 import NextLink from 'next/link';
-import { Box, Heading, HStack, Img as Image, Text, useColorModeValue } from '@chakra-ui/react';
-import { Portfolio } from 'types/portfolio';
+import { Box, Heading, Img as Image, Text, useColorModeValue } from '@chakra-ui/react';
+import { Portfolio } from '@interfaces';
 import { contentToPlainText, timesAgoFormatter } from '@util';
 
 type PortfolioItemProps = {
