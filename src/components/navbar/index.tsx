@@ -38,23 +38,21 @@ export const Navbar: React.FC<NavbarProps> = ({ links = [] }: NavbarProps) => {
       >
         <Container maxW="container.lg">
           <HStack justify="space-between" w="100%" h={16}>
-            <Heading
-              px={{ base: 4, md: 2 }}
-              color={useColorModeValue('gray.900', 'white')}
-              fontSize={{ base: '1.42rem' }}
-              _before={{ content: '"{ "' }}
-              _after={{ content: '" }"' }}
-              cursor="pointer"
-            >
-              <NextLink href="/" passHref>
-                <>
-                  nando
-                  <Text as="span" color={useColorModeValue('teal.800', 'teal.500')}>
-                    moreira
-                  </Text>
-                </>
-              </NextLink>
-            </Heading>
+            <NextLink href="/" passHref>
+              <Heading
+                px={{ base: 4, md: 2 }}
+                color={useColorModeValue('gray.900', 'white')}
+                fontSize={{ base: '1.42rem' }}
+                _before={{ content: '"{ "' }}
+                _after={{ content: '" }"' }}
+                cursor="pointer"
+              >
+                nando
+                <Text as="span" color={useColorModeValue('teal.800', 'teal.500')}>
+                  moreira
+                </Text>
+              </Heading>
+            </NextLink>
 
             <HStack ml={-4} spacing={2} display={{ base: 'none', md: 'block' }}>
               {links.length > 0 &&

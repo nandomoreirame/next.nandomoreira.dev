@@ -19,7 +19,7 @@ export default {
     },
     {
       name: 'image',
-      title: 'Main image',
+      title: 'Image',
       type: 'image',
       options: {
         hotspot: true,
@@ -28,12 +28,17 @@ export default {
     {
       name: 'link',
       title: 'Link',
-      type: 'string',
+      type: 'url',
     },
     {
       name: 'publishedAt',
       title: 'Published at',
-      type: 'datetime',
+      type: 'date',
+    },
+    {
+      title: 'online?',
+      name: 'isOnline',
+      type: 'boolean',
     },
     {
       name: 'description',

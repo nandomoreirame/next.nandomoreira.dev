@@ -61,7 +61,11 @@ const socialLinks: SocialLinkProps[] = [
   },
 ];
 
-export const Social: React.FC = () => {
+export interface SocialProps {
+  readonly border?: boolean;
+}
+
+export const Social: React.FC<SocialProps> = ({ border = false }: SocialProps) => {
   const tooltipBg = useColorModeValue('gray.900', 'white');
   const tooltipColor = useColorModeValue('white', 'gray.900');
   const beforeNav = {
@@ -80,10 +84,10 @@ export const Social: React.FC = () => {
         <Box
           as="nav"
           alignItems={{ md: 'center' }}
-          display={{ base: 'block', md: 'flex' }}
+          display={{ base: 'block', md: border ? 'flex' : 'block' }}
           textAlign={'center'}
           justifyContent={{ md: 'flex-start' }}
-          _before={{ lg: beforeNav }}
+          _before={{ lg: border ? beforeNav : {} }}
           mt={5}
         >
           {socialLinks.map(({ link, title, icon }: SocialLinkProps) => (
@@ -103,6 +107,7 @@ export const Social: React.FC = () => {
                 rounded="md"
                 p={2}
                 mx={2}
+                mb={2}
                 href={link}
                 transition="all .23s ease-in-out"
                 target="_blank"

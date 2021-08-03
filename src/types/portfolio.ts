@@ -22,10 +22,10 @@ export interface BlockContent {
 export interface Portfolio {
   _id: string;
   _createdAt: string;
-  _type: string;
+  publishedAt?: string;
   description?: Array<BlockContent>;
   link?: string;
-  image?: Image;
+  imageUrl?: string;
   slug: Slug;
   tags?: Array<string>;
   title: string;

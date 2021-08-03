@@ -7,3 +7,7 @@ export * from './navbar/mobile-menu-button';
 export * from './page-header';
 export * from './available-bar';
 export * from './content';
+export * from './avatar';
+export * from './about';
+export * from './card';
+export * from './portfolio-item';

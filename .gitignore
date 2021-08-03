@@ -33,6 +33,9 @@ yarn-error.log*
 public/sw.js
 public/workbox-*.js
 
+# sanity
+public/sanity
+
 # storybook
 storybook-static
 !.vscode

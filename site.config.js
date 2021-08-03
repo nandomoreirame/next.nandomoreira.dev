@@ -1,6 +1,7 @@
 const { name, description, homepage, version, repository, license } = require('./package.json');
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || homepage;
+const SANITY_BASE_URL = process.env.NEXT_PUBLIC_SANITY_BASE_URL || '';
 
 const AUTHOR = {
   name: 'Fernando Moreira',
@@ -54,6 +55,7 @@ const SEO = {
 module.exports = {
   AUTHOR,
   BASE_URL,
+  SANITY_BASE_URL,
   SEO,
   WEBSITE,
 };

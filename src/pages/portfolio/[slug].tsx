@@ -6,6 +6,7 @@ import { sanity } from '@services/sanify';
 import { PortfolioListQ, PortfolioSingleQ } from '@queries';
 import { Content, PageHeader } from '@components';
 import { Portfolio } from 'types/portfolio';
+import { contentToPlainText } from '@util';
 
 type ProjectSinglePageProps = {
   portfolio: Portfolio;
@@ -14,17 +15,17 @@ type ProjectSinglePageProps = {
 const ProjectSinglePage: NextPage<ProjectSinglePageProps> = ({
   portfolio,
 }: ProjectSinglePageProps) => {
-  const [pageTitle] = React.useState(portfolio.slug.current);
-  const [pageDescription] = React.useState(portfolio.title);
-
   React.useEffect(() => {
     // eslint-disable-next-line no-console
     console.log(portfolio);
   }, [portfolio]);
 
   return (
-    <DefaultLayout title={pageTitle} description={pageDescription}>
-      <PageHeader title={pageTitle} description={pageDescription} />
+    <DefaultLayout
+      title={`Portfolio: ${portfolio.title}`}
+      description={contentToPlainText(portfolio.description)}
+    >
+      <PageHeader title={'Portfolio'} description={portfolio.title} />
       <Container maxW="container.lg">
         <Heading>{portfolio?.slug?.current}</Heading>
         <Content content={portfolio.description} />
@@ -45,7 +46,7 @@ export async function getStaticPaths() {
   });
 
   // eslint-disable-next-line no-console
-  console.log(paths);
+  // console.log(paths);
 
   return {
     paths,
@@ -61,7 +62,7 @@ export async function getStaticProps({ params }: GetStaticPropsContext) {
   console.log(portfolio);
 
   return {
-    props: { portfolio: portfolio[0] },
+    props: { portfolio: portfolio },
   };
 }
 
