@@ -10,7 +10,7 @@ const AboutPage: NextPage = () => {
 
   return (
     <DefaultLayout title={pageTitle} description={pageDescription}>
-      <PageHeader title={pageTitle} description={pageDescription} />
+      <PageHeader heading={pageTitle} title={pageDescription} />
       <About />
     </DefaultLayout>
   );

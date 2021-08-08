@@ -35,6 +35,7 @@ public/workbox-*.js
 
 # sanity
 public/sanity
+sanity/.env.development
 
 # storybook
 storybook-static

@@ -25,7 +25,7 @@ const ProjectSinglePage: NextPage<ProjectSinglePageProps> = ({
       title={`Portfolio: ${portfolio.title}`}
       description={contentToPlainText(portfolio.description)}
     >
-      <PageHeader title={'Portfolio'} description={portfolio.title} />
+      <PageHeader heading={'Portfolio'} title={portfolio.title} />
       <Container maxW="container.lg">
         <Heading>{portfolio?.slug?.current}</Heading>
         <Content content={portfolio.description} />

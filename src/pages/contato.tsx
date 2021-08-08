@@ -10,12 +10,14 @@ const ContactPage: NextPage = () => {
 
   return (
     <DefaultLayout title={pageTitle} description={pageDescription}>
-      <PageHeader title={pageTitle} description={pageDescription} />
+      <PageHeader
+        heading={pageTitle}
+        title={pageDescription}
+        description="Você tem um projeto em mente ou está simplesmente interessado em bater um papo, entre em
+          contato!"
+      />
       <Container maxW="container.lg">
-        <Text>
-          Você tem um projeto em mente ou está simplesmente interessado em bater um papo, entre em
-          contato!
-        </Text>
+        <Text>contato</Text>
       </Container>
     </DefaultLayout>
   );

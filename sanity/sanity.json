@@ -4,10 +4,7 @@
     "name": "nandomoreira.dev",
     "basePath": "/sanity"
   },
-  "api": {
-    "projectId": "9mvsdj6d",
-    "dataset": "production"
-  },
+  "api": {},
   "plugins": [
     "@sanity/base",
     "@sanity/components",

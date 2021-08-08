@@ -1,12 +1,17 @@
 import * as React from 'react';
-import { Box, Container, Heading, useColorModeValue } from '@chakra-ui/react';
+import { Box, Container, Heading, Text, useColorModeValue } from '@chakra-ui/react';
 
 type PageHeaderProps = {
-  title: string;
-  description: string;
+  description?: string;
+  heading?: string;
+  title?: string;
 };
 
-export const PageHeader: React.FC<PageHeaderProps> = ({ title, description }: PageHeaderProps) => {
+export const PageHeader: React.FC<PageHeaderProps> = ({
+  heading,
+  description,
+  title,
+}: PageHeaderProps) => {
   return (
     <Box
       as="header"
@@ -16,20 +21,29 @@ export const PageHeader: React.FC<PageHeaderProps> = ({ title, description }: Pa
       backgroundColor={useColorModeValue('gray.100', 'gray.900')}
     >
       <Container maxW="container.lg">
-        <Heading
-          as="h1"
-          color={useColorModeValue('gray.500', 'gray.400')}
-          fontSize={{ base: 'lg', lg: 'xl' }}
-          textTransform="uppercase"
-          fontFamily="heading"
-          letterSpacing="tight"
-          mb="3"
-        >
-          {title}
-        </Heading>
-        <Heading as="p" size="2xl" fontFamily={'heading'}>
-          {description}
-        </Heading>
+        {heading && (
+          <Heading
+            as="h1"
+            color={useColorModeValue('gray.500', 'gray.400')}
+            fontSize={{ base: 'lg', lg: 'xl' }}
+            textTransform="uppercase"
+            fontFamily="heading"
+            letterSpacing="tight"
+            mb="3"
+          >
+            {heading}
+          </Heading>
+        )}
+        {title && (
+          <Heading as="p" size="2xl" fontFamily={'heading'} mb={description ? 3 : 0}>
+            {title}
+          </Heading>
+        )}
+        {description && (
+          <Text fontSize={'xl'} color={'gray.400'}>
+            {description}
+          </Text>
+        )}
       </Container>
     </Box>
   );

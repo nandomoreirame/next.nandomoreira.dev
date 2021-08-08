@@ -19,7 +19,7 @@ const PortfolioPage: NextPage<PortfolioPageProps> = ({ portfolio }: PortfolioPag
 
   return (
     <DefaultLayout title={pageTitle} description={pageDescription}>
-      <PageHeader title={pageTitle} description={pageDescription} />
+      <PageHeader heading={pageTitle} title={pageDescription} />
       <Container maxW="container.lg">
         <VStack>
           {portfolio &&
@@ -37,7 +37,7 @@ export async function getStaticProps() {
   const portfolio: Array<Portfolio> = await sanity.fetch(PortfolioListQ);
 
   // eslint-disable-next-line no-console
-  // console.log(portfolio);
+  // console.log(portfolio.map(item => item.tags));
 
   return {
     props: { portfolio },
