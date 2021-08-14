@@ -6,7 +6,8 @@ export interface Portfolio {
   _id: string;
   _createdAt: string;
   publishedAt?: string;
-  description?: Array<BlockContent>;
+  content?: Array<BlockContent>;
+  description: string;
   link?: string;
   image?: Image;
   imageUrl?: string;

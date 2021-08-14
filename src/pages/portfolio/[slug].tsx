@@ -15,20 +15,19 @@ type ProjectSinglePageProps = {
 const ProjectSinglePage: NextPage<ProjectSinglePageProps> = ({
   portfolio,
 }: ProjectSinglePageProps) => {
+  const pageTitle = portfolio.title;
+  const pageDescription = portfolio.description || contentToPlainText(portfolio?.content);
+
   React.useEffect(() => {
     // eslint-disable-next-line no-console
     console.log(portfolio);
   }, [portfolio]);
 
   return (
-    <DefaultLayout
-      title={`Portfolio: ${portfolio.title}`}
-      description={contentToPlainText(portfolio.description)}
-    >
-      <PageHeader heading={'Portfolio'} title={portfolio.title} />
+    <DefaultLayout title={`Portfolio: ${pageTitle}`} description={pageDescription}>
+      <PageHeader heading={'Portfolio'} title={pageTitle} description={pageDescription} />
       <Container maxW="container.lg">
-        <Heading>{portfolio?.slug?.current}</Heading>
-        <Content content={portfolio.description} />
+        {portfolio?.content && <Content content={portfolio?.content} />}
       </Container>
     </DefaultLayout>
   );

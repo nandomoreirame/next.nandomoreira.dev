@@ -7,6 +7,7 @@ export default {
       name: 'title',
       title: 'Title',
       type: 'string',
+      validation: Rule => Rule.required().min(10).max(80),
     },
     {
       name: 'slug',
@@ -14,8 +15,15 @@ export default {
       type: 'slug',
       options: {
         source: 'title',
-        maxLength: 96,
+        maxLength: 80,
       },
+      validation: Rule => Rule.required().min(10).max(80),
+    },
+    {
+      name: 'description',
+      title: 'Description',
+      type: 'text',
+      validation: Rule => Rule.required().min(10).max(250),
     },
     {
       name: 'image',
@@ -41,8 +49,8 @@ export default {
       type: 'boolean',
     },
     {
-      name: 'description',
-      title: 'Description',
+      name: 'content',
+      title: 'Content',
       type: 'blockContent',
     },
     {

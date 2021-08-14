@@ -11,8 +11,8 @@ import { More } from './more';
 export const About: React.FC = () => {
   return (
     <Container maxW="container.lg">
-      <Box display={{ base: 'block', md: 'flex' }}>
-        <Box mr={{ base: 0, md: 10 }} mb={{ base: 10, md: 0 }} w={{ base: '100%', md: 'lg' }}>
+      <Box display={{ base: 'block', md: 'flex' }} mb={6}>
+        <Box mr={{ base: 0, md: 10 }} mb={{ base: 10, md: 0 }} w={{ base: '100%', md: '40%' }}>
           <Image
             src={avatar?.src}
             alt={`Foto de Fernando Moreira`}
@@ -23,14 +23,17 @@ export const About: React.FC = () => {
           <Social />
         </Box>
 
-        <Card>
+        <Box mr={{ base: 0, md: 10 }} mb={{ base: 10, md: 0 }} w={{ base: '100%', md: '60%' }}>
           <Me />
-          <History />
-          <Today />
-          <Project />
-          <More />
-        </Card>
+        </Box>
       </Box>
+
+      <Card>
+        <History />
+        <Today />
+        <Project />
+        <More />
+      </Card>
     </Container>
   );
 };

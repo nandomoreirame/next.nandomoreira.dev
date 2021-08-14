@@ -10,14 +10,14 @@ export const Me: React.FC = () => {
   }, []);
 
   return (
-    <AboutCard title="Eu sou o Fernando, prazer em conhece-lo" border>
-      <Text mb={4}>
+    <AboutCard title="Eu sou o Fernando, prazer em conhece-lo">
+      <Text fontSize={{ base: '1.4rem' }} mb={4}>
         Meu nome completo é <strong>Fernando Moreira Costa</strong>, tenho <span>{age}</span> anos,
         nasci e cresci em uma cidadezinha do interior de <strong>Rondônia</strong> chamada{' '}
         <strong>Ariquemes</strong> , sai de lá com 18 anos para me aventurar em{' '}
         <strong>Curitiba/PR</strong> onde moro atualmente.
       </Text>
-      <Text mb={4}>
+      <Text fontSize={{ base: '1.4rem' }} mb={4}>
         <span role="img" aria-label="emoji de um notebook">
           💻
         </span>{' '}

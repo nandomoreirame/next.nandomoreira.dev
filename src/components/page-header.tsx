@@ -12,6 +12,9 @@ export const PageHeader: React.FC<PageHeaderProps> = ({
   description,
   title,
 }: PageHeaderProps) => {
+  const colorHeading = useColorModeValue('gray.600', 'gray.400');
+  const colorDescription = useColorModeValue('gray.500', 'gray.600');
+
   return (
     <Box
       as="header"
@@ -24,7 +27,7 @@ export const PageHeader: React.FC<PageHeaderProps> = ({
         {heading && (
           <Heading
             as="h1"
-            color={useColorModeValue('gray.500', 'gray.400')}
+            color={colorHeading}
             fontSize={{ base: 'lg', lg: 'xl' }}
             textTransform="uppercase"
             fontFamily="heading"
@@ -40,7 +43,7 @@ export const PageHeader: React.FC<PageHeaderProps> = ({
           </Heading>
         )}
         {description && (
-          <Text fontSize={'xl'} color={'gray.400'}>
+          <Text fontSize={'xl'} color={colorDescription}>
             {description}
           </Text>
         )}
